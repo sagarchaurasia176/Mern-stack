@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        display: inline-flex;
+      }
+      .btn{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="range" max="10" min="1" value="0" id="sliderRange" />
+    <br /><br />
+    <input type="checkbox" id="lower" />
+    <p>LOWER</p>
+    <input type="checkbox" id="upper" />
+    <p>UPPPER</p>
+
+    <input type="checkbox" id="number" />
+    <p>NUMBER</p>
+
+    <input type="checkbox" id="symbol" />
+    <p>SYMBOLE</p>
+
+    <span
+      id="numberIncrement"
+      style="
+        display: flex;
+        font-size: 5.5rem;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+      "
+      >0</span
+    >
+<br><br>
+<button class="btn" id="btngen">GENERATE</button>
+
+  </body>
+  <script src="./index.js"></script>
+</html>

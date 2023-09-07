@@ -1,0 +1,25 @@
+ 
+.container{
+    background-color: rgb(103, 103, 103);
+    width: 60%;
+    height: 60vh;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+.container video{
+    margin-left:400px;
+    width: 650px;
+    margin-top: -150px;
+}
+  .container button{
+    padding:10px 12px 10px 12px;
+    margin-top:20px ;
+    font-size: 19px;
+
+  }
+.container button:hover{
+    background-color:orangered;
+    transition: all 1s;
+cursor: pointer;
+color: white;
+}
