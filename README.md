@@ -1,3 +1,5 @@
-# DONT THINK START DOING ..... TECHNO INFO .........
+#  welcome to my full stack development code hub 
+In this repository i've uploaded my all practice code related to web dev
+
 In this repository , I have added my js practice code 
-![photo-1516116412344-6663387e8590](https://github.com/sagarchaurasia176/myJs/assets/101509099/b6ef640e-3462-4170-9358-871a67e90bdd)
+![download](https://github.com/sagarchaurasia176/myJs/assets/101509099/6fc93da6-de9e-48a0-94f1-aaedc5719ef2)
