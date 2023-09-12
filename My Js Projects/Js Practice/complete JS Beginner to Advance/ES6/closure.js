@@ -1,6 +1,0 @@
-// clouser
-/*
-what is clouser?
-
-
-*/ 
