@@ -1,8 +1,25 @@
-#  Welcome To My MERN STACK Development Code Hub 
-In this repository i've uploaded my all practice code related to web dev
+
+#  I ❤ MERN STACK
+In this repo, I've uploaded my all Mern stack practice code which is very useful for you if you're Beginner |sagarChaurasia.in|
 
 
-![images](https://github.com/sagarchaurasia176/myJs/assets/101509099/9243dbf1-f4d7-422c-b4ec-a50d7d9116cd)
-#Best online editor for FrontEnd  Practice is
 
-https://ide.geeksforgeeks.org/online-html-editor
+
+
+
+ 
+
+
+## what is mern stack 🤷‍♀️🤷‍
+
+MERN stands for MongoDB, Express, React, Node, after the four key technologies that make up the stack. MongoDB — document database. Express(.js) — Node.js web framework. React(.js) — a client-side JavaScript framework.
+
+ 
+
+![Logo](
+    https://static.javatpoint.com/blog/images/mern-stack.png
+)
+
+
+## other data come very soon ...
+ 
