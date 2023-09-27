@@ -1,1 +1,0 @@
-// We can use the document.createElement() to add new elements to the DOM tree.
