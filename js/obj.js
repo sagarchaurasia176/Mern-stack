@@ -15,13 +15,49 @@ const data = {
         }
 
     },
+    "id": 2,
+    "name": "sagar Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+
+    "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+        }
+
+    },
+    "id": 3,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+
+    "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+            "lat": "-37.3159",
+            "lng": "81.1496"
+        }
+
+    },
 }
-let dataCheck = (id, name, username, email) => {
-    let userId = console.log(this.id);
-    let userName = console.log(this.name);
-};
-dataCheck.userId;
-dataCheck.userName;
+
+const datas = (id, name) => {
+    id = console.log(data.id);
+    name = console.log(data.name);
+}
+
+datas();
+
+
+
 
 
 
@@ -59,4 +95,4 @@ dataCheck.userName;
 //         }
 //     }
 // }
-console.log(dataCheck);
+// console.log(dataCheck);
