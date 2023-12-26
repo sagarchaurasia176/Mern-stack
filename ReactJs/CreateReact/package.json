@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@babel/standalone": "^7.23.6"
+  }
+}
