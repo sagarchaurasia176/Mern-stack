@@ -1,19 +1,17 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
 // import Array from '../src/Day3/Array'
-import Maps from './Day3/Map'
-
-
-
-
-
+import Renderingcomponents from "./Day4/Renderingcomponents";
 function App() {
   return (
     <>
-  {/* <Array/> */}  
-    <Maps/>
+      {/* <Array/> */}
+    <Renderingcomponents/>
     </>
-  )
+  );
 }
 
-export default App
+
+export default App;
+
+
