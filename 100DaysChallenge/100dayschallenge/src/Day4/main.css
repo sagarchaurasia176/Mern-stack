@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background-color: rgb(3, 0, 23);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 1.3rem;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flexbox;
+    /* justify-content: center; */
+}
+
+.table-auto {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: auto;
+    padding: 2.3rem;
+}
+
+.container,
+thead {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+thead {
+    background-color: aqua;
+}
+
+.container tr {
+    padding: 1.0rem;
+}
+
+.search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 16px;
+    width: 50%;
+}
+
+
+/* Styling for the search button */
+
+.search-button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Hover effect for the search button */
+
+.search-button:hover {
+    background-color: #45a049;
+}
