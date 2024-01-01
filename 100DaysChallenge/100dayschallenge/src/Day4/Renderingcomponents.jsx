@@ -7,22 +7,19 @@ export default function Renderingcomponents() {
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
       );
       const response = await dataApi.json();
-      console.log(response);
     } catch {
       throw new Error("!oops ");
     }
     // last stopsed of the functions
   };
   //btn response
-
-  function btnClick() {
-    let userRespon = document.querySelector(".search-input");
-    if (userRespon) {
-      let dataGet = userRespon.value.trim();
-      mealFood(dataGet);
-    }
-  }
-
+  const searchBtn = document.getElementById('searchBar');
+  const btn = document.getElementById('searcBtn');
+  btn.addEventListener('click' , ()=>{
+    const inputOFUser=searchBtn.value.trim();
+    mealFood(inputOFUser)    
+    })
+    // dataStored();
   return (
     <>
       <div className="container">
@@ -30,13 +27,8 @@ export default function Renderingcomponents() {
           <h1>Foody corner</h1>
         </header>
         <search className="search">
-          <input type="text" class="search-input" placeholder="Search..." />
-          <button
-            type="submit"
-            class="search-button"
-            id="searcBtn"
-            onClick={btnClick}
-          >
+          <input type="text" class="search-input" placeholder="Search..." id="searchBar" />
+          <button type="click" class="search-button" id="searcBtn">
             Search
           </button>
         </search>
@@ -44,15 +36,15 @@ export default function Renderingcomponents() {
           <thead>
             <tr>
               <th>Meal Id</th>
-              <th>Food Name</th>
+              <th>Food Img</th>
               <th>Price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>The Sliding Mr</td>
-              <td>Malcol</td>
-              <td>1961</td>
+              <td>Data Not fetch</td>
+              <td>Data Not fetch</td>
+              <td>Data Not fetch</td>
             </tr>
           </tbody>
         </table>
