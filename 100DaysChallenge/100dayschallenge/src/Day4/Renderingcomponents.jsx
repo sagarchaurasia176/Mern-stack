@@ -6,20 +6,16 @@ export default function Renderingcomponents() {
       const dataApi = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
       );
-      const response = await dataApi.json();
+      const response = await dataApi.json();    
+       
+      
     } catch {
       throw new Error("!oops ");
     }
     // last stopsed of the functions
   };
-  //btn response
-  const searchBtn = document.getElementById('searchBar');
-  const btn = document.getElementById('searcBtn');
-  btn.addEventListener('click' , ()=>{
-    const inputOFUser=searchBtn.value.trim();
-    mealFood(inputOFUser)    
-    })
-    // dataStored();
+
+  // dataStored();
   return (
     <>
       <div className="container">
@@ -27,7 +23,12 @@ export default function Renderingcomponents() {
           <h1>Foody corner</h1>
         </header>
         <search className="search">
-          <input type="text" class="search-input" placeholder="Search..." id="searchBar" />
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            id="searchInput"
+          />
           <button type="click" class="search-button" id="searcBtn">
             Search
           </button>
@@ -41,11 +42,12 @@ export default function Renderingcomponents() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Data Not fetch</td>
-              <td>Data Not fetch</td>
-              <td>Data Not fetch</td>
-            </tr>
+            
+                <tr>
+                  <td>Data not </td>
+                  <td>Data Not fetch</td>
+                  <td>Data Not fetch</td>
+                </tr>
           </tbody>
         </table>
       </div>
