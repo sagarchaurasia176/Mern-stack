@@ -1,25 +1,33 @@
 import React from "react";
 import "./main.css";
-export default function Renderingcomponents() {
-  const mealFood = async (query) => {
-    try {
-      const dataApi = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
-      );
-      const response = await dataApi.json();    
-       
-      
-    } catch {
-      throw new Error("!oops ");
-    }
-    // last stopsed of the functions
-  };
+ async function ApiFoodCorner(query){
+    try{
+    let ApiFetchUrl =await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s={query}')
+   let urlConvrt = await ApiFetchUrl.json();
+    console.log(urlConvrt)
+  }
+  catch{
+      throw new Error ("!oops error");
+  }
 
+}
+
+  function BtnClick(){
+      let searchBtn = document.getElementById('searcBtn');
+      searchBtn.addEventListener('click' , ()=>{
+          let userType = document.getElementById('searchInput');
+          let DataGetFromType = userType.value.trim();
+          console.log(ApiFoodCorner(DataGetFromType));
+      })
+  }
+ 
+
+export default function Renderingcomponents() {
   // dataStored();
   return (
     <>
       <div className="container">
-        <header>
+        <header className="heads">
           <h1>Foody corner</h1>
         </header>
         <search className="search">
@@ -29,7 +37,7 @@ export default function Renderingcomponents() {
             placeholder="Search..."
             id="searchInput"
           />
-          <button type="click" class="search-button" id="searcBtn">
+          <button type="click" class="search-button" id="searcBtn" onClick={BtnClick}>
             Search
           </button>
         </search>
@@ -42,12 +50,11 @@ export default function Renderingcomponents() {
             </tr>
           </thead>
           <tbody>
-            
-                <tr>
-                  <td>Data not </td>
-                  <td>Data Not fetch</td>
-                  <td>Data Not fetch</td>
-                </tr>
+            <tr>
+              <td>Data not </td>
+              <td>Data Not fetch</td>
+              <td>Data Not fetch</td>
+            </tr>
           </tbody>
         </table>
       </div>
