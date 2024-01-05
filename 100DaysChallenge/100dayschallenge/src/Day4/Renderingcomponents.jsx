@@ -1,29 +1,29 @@
 import React from "react";
 import "./main.css";
- async function ApiFoodCorner(query){
-    try{
-    let ApiFetchUrl =await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s={query}')
-   let urlConvrt = await ApiFetchUrl.json();
-    console.log(urlConvrt)
+async function ApiFoodCorner(query) {
+  try {
+    const ApiFetchUrl = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?f=${query}`
+    );
+    const urlConvrt = await ApiFetchUrl.json();
+    return urlConvrt.meals;
+  } catch {
+    throw new Error("!oops error");
   }
-  catch{
-      throw new Error ("!oops error");
-  }
-
 }
-
-  function BtnClick(){
-      let searchBtn = document.getElementById('searcBtn');
-      searchBtn.addEventListener('click' , ()=>{
-          let userType = document.getElementById('searchInput');
-          let DataGetFromType = userType.value.trim();
-          console.log(ApiFoodCorner(DataGetFromType));
-      })
+const btnClickHandler = async () => {
+  try {
+    const userInput = document.getElementById("searchInput").value.trim();
+    const data = await ApiFoodCorner(userInput);
+      mealData(data)
+  } catch (error) {
+    console.error(error.message);
   }
- 
+};
 
-export default function Renderingcomponents() {
+export default function DisplayData() {
   // dataStored();
+
   return (
     <>
       <div className="container">
@@ -37,7 +37,12 @@ export default function Renderingcomponents() {
             placeholder="Search..."
             id="searchInput"
           />
-          <button type="click" class="search-button" id="searcBtn" onClick={BtnClick}>
+          <button
+            type="click"
+            class="search-button"
+            id="searcBtn"
+            onClick={btnClickHandler}
+          >
             Search
           </button>
         </search>
@@ -50,11 +55,13 @@ export default function Renderingcomponents() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Data not </td>
-              <td>Data Not fetch</td>
-              <td>Data Not fetch</td>
-            </tr>
+            {me.map((item) => {
+              <tr id={item.idMeal}>
+                <td>{item.idMeal}</td>
+                <td>Data Not fetch</td>
+                <td>Data Not fetch</td>
+              </tr>;
+            })}
           </tbody>
         </table>
       </div>
