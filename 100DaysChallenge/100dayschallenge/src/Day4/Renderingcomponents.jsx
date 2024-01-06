@@ -1,29 +1,24 @@
 import React from "react";
 import "./main.css";
+import { useState } from "react";
 async function ApiFoodCorner(query) {
   try {
     const ApiFetchUrl = await fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?f=${query}`
     );
     const urlConvrt = await ApiFetchUrl.json();
-    return urlConvrt.meals;
   } catch {
     throw new Error("!oops error");
   }
 }
-const btnClickHandler = async () => {
-  try {
-    const userInput = document.getElementById("searchInput").value.trim();
-    const data = await ApiFoodCorner(userInput);
-      mealData(data)
-  } catch (error) {
-    console.error(error.message);
+const btnClickHandler = () => {
+    let userInput = document.getElementById('searchInput').value.trim();
+    console.log(ApiFoodCorner(userInput))
   }
-};
 
 export default function DisplayData() {
   // dataStored();
-
+  const [meals, setMeals] = useState([]);
   return (
     <>
       <div className="container">
@@ -55,13 +50,14 @@ export default function DisplayData() {
             </tr>
           </thead>
           <tbody>
-            {me.map((item) => {
-              <tr id={item.idMeal}>
-                <td>{item.idMeal}</td>
-                <td>Data Not fetch</td>
-                <td>Data Not fetch</td>
-              </tr>;
+            {meals.map((item)=>{
+               <tr id={item.idMealid}>
+               <td>{item.idMealid}</td>
+               <td>{item.strIngredient1}</td>
+               <td>{item.strMealThumb}</td>
+             </tr>
             })}
+           
           </tbody>
         </table>
       </div>
