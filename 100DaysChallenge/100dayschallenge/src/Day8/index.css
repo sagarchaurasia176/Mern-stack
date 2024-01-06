@@ -1,0 +1,25 @@
+ button {
+     background-color: aquamarine;
+     color: black;
+     padding: 1.2rem;
+     border-radius: 12px;
+     cursor: pointer;
+     font-weight: bolder;
+     margin: 0 auto;
+     margin-left: 12px;
+ }
+ 
+ h1 {
+     font-weight: bolder;
+ }
+ 
+ .container {
+     background-color: white;
+     margin: 0 auto;
+     max-width: 1200px;
+     height: 23vh;
+     width: 80%;
+     text-align: center;
+     justify-content: center;
+     border-radius: 12px;
+ }
