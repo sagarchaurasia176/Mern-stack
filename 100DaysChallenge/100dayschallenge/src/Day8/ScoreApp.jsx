@@ -7,7 +7,12 @@ export default function Score() {
     function addNum(){
         scoreCount(score + 1);
 }
-  return (
+    let wkt = 0
+    function addWkt(){
+        wkt+=1;
+    }
+
+return (
     <>
       {/* start to apply the event  */}
       <div className="container">
@@ -15,8 +20,13 @@ export default function Score() {
             <p className=" text-center font-medium via-black  flex">{score} / {scoreCount}</p>
         <div className="btn">
           <button onClick={addNum}>0</button>
+          <button onClick={()=>addNum(1)}>1</button>
+          <button onClick={addNum(2)}>2</button>
+          <button onClick={addNum(3)}>3</button>
+          <button onClick={addNum(4)}>4</button>
+          <button onClick={addNum(5)}>5</button>
           
-          <button>wicket</button>
+          <button onClick={addWkt}>wicket</button>
 
         </div>
       </div>

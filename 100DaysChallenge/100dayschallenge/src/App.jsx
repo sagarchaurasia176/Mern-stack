@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 // import Oroperator from "./Day7/Oroperator";
 // import Array from '../src/Day3/Array'
-import Renderingcomponents from "./Day4/Renderingcomponents";
+// import Renderingcomponents from "./Day4/Renderingcomponents";
 // import Terniary from "../src/Day5/Terniary";
 // import ConditionalRenderingAnd from "./Day6/ConditionalRenderingAnd";
 // import Projects from "./Day7/Project";
@@ -10,11 +10,12 @@ import Renderingcomponents from "./Day4/Renderingcomponents";
   // import MapWithObj from "./Day7/MapWithObjPractice";
 // import DayMonth from "./Day7/PracticeMap";
 // import Score from "./Day8/ScoreApp";
+import Render from "./Day9/RenderData";
 function App() {
   return (
     <>
       {/* <Array/> */}
-      <Renderingcomponents/>
+      {/* <Renderingcomponents/> */}
       {/* <Terniary /> */}
       {/* <ConditionalRenderingAnd/> */}
       {/* <Oroperator/> */}
@@ -23,6 +24,7 @@ function App() {
       {/* <MapWithObj/> */}
       {/* <DayMonth/> */}
       {/* <Score/> */}
+      <Render/>
     </>
   );
 }
