@@ -11,7 +11,8 @@ import "./App.css";
 // import DayMonth from "./Day7/PracticeMap";
 // import Score from "./Day8/ScoreApp";
 // import Render from "./Day9/RenderData";
-import BoxFood from "./Day10/Food";
+// import BoxFood from "./Day10/Food";
+import TechNews from "./Day11/TechNews";
 function App() {
   return (
     <>
@@ -25,7 +26,8 @@ function App() {
       {/* <MapWithObj/> */}
       {/* <DayMonth/> */}
       {/* <Score/> */}
-    <BoxFood/>
+    {/* <BoxFood/> */}
+      <TechNews/>
     </>
   );
 }
