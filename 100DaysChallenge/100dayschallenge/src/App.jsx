@@ -12,7 +12,8 @@ import "./App.css";
 // import Score from "./Day8/ScoreApp";
 // import Render from "./Day9/RenderData";
 // import BoxFood from "./Day10/Food";
-import TechNews from "./Day11/TechNews";
+// import TechNews from "./Day11/TechNews";
+import DataFetch from "./Day12/ArrayObj";
 function App() {
   return (
     <>
@@ -27,7 +28,10 @@ function App() {
       {/* <DayMonth/> */}
       {/* <Score/> */}
     {/* <BoxFood/> */}
-      <TechNews/>
+      {/* <TechNews/> */}
+      <DataFetch/>
+
+
     </>
   );
 }
