@@ -13,7 +13,10 @@ import "./App.css";
 // import Render from "./Day9/RenderData";
 // import BoxFood from "./Day10/Food";
 // import TechNews from "./Day11/TechNews";
-import DataFetch from "./Day12/ArrayObj";
+// import DataFetch from "./Day12/ArrayObj";
+// import Practice from "./Day13/Pops";
+  import Array from "./Day13/Array";
+// import Product from "./Day13/Components/Item";
 function App() {
   return (
     <>
@@ -29,7 +32,10 @@ function App() {
       {/* <Score/> */}
     {/* <BoxFood/> */}
       {/* <TechNews/> */}
-      <DataFetch/>
+      {/* // <DataFetch/> */}
+      {/* <Practice/> */}
+      {/* <Product/> */}
+      <Array/>
 
 
     </>
