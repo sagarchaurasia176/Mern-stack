@@ -1,10 +1,10 @@
 import React from "react";
 import "./Moviy.css";
-
+import MovieRendering from "./Search/Search";
 export default function Moviefys() {
   return (
     <>
-      <div className=" container">
+      <div className=" container text-white text-center">
         <div className="header">
           <div className="logo">
             <div className="text">MovieFy</div>
@@ -26,7 +26,10 @@ export default function Moviefys() {
             </ul>
           </div>
         </div>
+        <MovieRendering />
       </div>
+
+      {/* search container */}
     </>
   );
 }
