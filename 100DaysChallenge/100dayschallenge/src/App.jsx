@@ -15,8 +15,9 @@ import "./App.css";
 // import TechNews from "./Day11/TechNews";
 // import DataFetch from "./Day12/ArrayObj";
 // import Practice from "./Day13/Pops";
-  import Array from "./Day13/Array";
+  // import Array from "./Day13/Array";
 // import Product from "./Day13/Components/Item";
+import Moviefys from "./Day14/Movify";
 function App() {
   return (
     <>
@@ -35,9 +36,10 @@ function App() {
       {/* // <DataFetch/> */}
       {/* <Practice/> */}
       {/* <Product/> */}
-      <Array/>
-
-
+      {/* <Array/> */}
+      <Moviefys/>
+   
+   
     </>
   );
 }

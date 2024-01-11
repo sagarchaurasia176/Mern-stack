@@ -1,0 +1,2 @@
+-- creating the simple movie website using react js
+-- so I start learning
