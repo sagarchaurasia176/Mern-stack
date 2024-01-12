@@ -1,9 +1,6 @@
 import React from "react";
 import "./Moviy.css";
 import MovieRendering from "./Search";
-function data(){
-
-}
 
 export default function Moviefys() {
   return (
@@ -31,6 +28,10 @@ export default function Moviefys() {
           </div>
         </div>
         <MovieRendering />
+        {/* movie jsx component */}
+
+       
+
       </div>
 
       {/* search container */}

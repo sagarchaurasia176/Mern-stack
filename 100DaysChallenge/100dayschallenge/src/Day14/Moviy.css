@@ -60,3 +60,9 @@
 .search-button:hover {
     background-color: #45a049;
 }
+
+.movieData {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 4, 1fr;
+}
