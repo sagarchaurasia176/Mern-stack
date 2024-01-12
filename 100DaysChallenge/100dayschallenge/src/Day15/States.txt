@@ -1,0 +1,2 @@
+-- what is state
+state is in build in object 

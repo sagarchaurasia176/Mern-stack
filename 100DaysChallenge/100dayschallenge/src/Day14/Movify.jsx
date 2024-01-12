@@ -1,6 +1,10 @@
 import React from "react";
 import "./Moviy.css";
-import MovieRendering from "./Search/Search";
+import MovieRendering from "./Search";
+function data(){
+
+}
+
 export default function Moviefys() {
   return (
     <>

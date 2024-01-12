@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import PropsConcp from "./Day15/Props/PropsConcept";
 // import Oroperator from "./Day7/Oroperator";
 // import Array from '../src/Day3/Array'
 // import Renderingcomponents from "./Day4/Renderingcomponents";
@@ -17,7 +18,10 @@ import "./App.css";
 // import Practice from "./Day13/Pops";
   // import Array from "./Day13/Array";
 // import Product from "./Day13/Components/Item";
-import Moviefys from "./Day14/Movify";
+// import Moviefys from "./Day14/Movify";
+// import MovieWebMaintainer from "./Day15/MovifyWeb";
+
+
 function App() {
   return (
     <>
@@ -37,9 +41,8 @@ function App() {
       {/* <Practice/> */}
       {/* <Product/> */}
       {/* <Array/> */}
-      <Moviefys/>
-   
-   
+      {/* <MovieWebMaintainer/> */}
+      <PropsConcp/>
     </>
   );
 }
