@@ -20,7 +20,8 @@ import "./App.css";
 // import Moviefys from "./Day14/Movify";
 // import MovieWebMaintainer from "./Day15/MovifyWeb";
 // import PropsConcp from "./Day15/Props/PropsConcept";
-import ApiPracticeeUsingUseState from "./Day16/ApiRev";
+// import ApiPracticeeUsingUseState from "./Day16/ApiRev";
+import State from "./Day17/MainComp";
 function App() {
   return (
     <>
@@ -42,7 +43,8 @@ function App() {
       {/* <Array/> */}
       {/* <MovieWebMaintainer/> */}
       {/* <PropsConcp/> */}
-      <ApiPracticeeUsingUseState/>
+      {/* <ApiPracticeeUsingUseState/> */}
+      <State/>
     </>
   );
 }
