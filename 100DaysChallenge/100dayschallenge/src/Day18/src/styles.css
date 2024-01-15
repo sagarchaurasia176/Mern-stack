@@ -1,0 +1,37 @@
+/* Write code for your CSS here */
+
+.container{
+        background-color: aquamarine;
+    width: 30%;
+    padding: 1.4rem;
+}
+ul li{
+    background-color: aqua;
+    color: black;
+}
+b{
+    font-size:1.1rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+span{
+    display: block;
+}
+p{
+    width: 23rem;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -52px;
+}
+ul li {
+    list-style-type: none;
+    padding: 0.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
