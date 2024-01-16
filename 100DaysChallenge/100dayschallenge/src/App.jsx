@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react'
 import "./App.css";
 // import Oroperator from "./Day7/Oroperator";
 // import Array from '../src/Day3/Array'
@@ -15,14 +15,17 @@ import "./App.css";
 // import TechNews from "./Day11/TechNews";
 // import DataFetch from "./Day12/ArrayObj";
 // import Practice from "./Day13/Pops";
-  // import Array from "./Day13/Array";
+// import Array from "./Day13/Array";
 // import Product from "./Day13/Components/Item";
 // import Moviefys from "./Day14/Movify";
 // import MovieWebMaintainer from "./Day15/MovifyWeb";
 // import PropsConcp from "./Day15/Props/PropsConcept";
 // import ApiPracticeeUsingUseState from "./Day16/ApiRev";
-import UseConcepts from "./Day19/UseStateConcepts";
-import State from "./Day17/MainComp";
+// import State from "./Day17/MainComp";
+// import UseConcepts from "./Day19/State";
+// import EventFun from './Day19/EventProps/Event';
+// import UseConcepts from './Day19/State';
+  import StateConcepts from './Day19/StateConcepts/State';
 function App() {
   return (
     <>
@@ -31,12 +34,12 @@ function App() {
       {/* <Terniary /> */}
       {/* <ConditionalRenderingAnd/> */}
       {/* <Oroperator/> */}
-      {/* <Projects/> */} 
+      {/* <Projects/> */}
       {/* <StudentDat/> */}
       {/* <MapWithObj/> */}
       {/* <DayMonth/> */}
       {/* <Score/> */}
-    {/* <BoxFood/> */}
+      {/* <BoxFood/> */}
       {/* <TechNews/> */}
       {/* // <DataFetch/> */}
       {/* <Practice/> */}
@@ -46,7 +49,12 @@ function App() {
       {/* <PropsConcp/> */}
       {/* <ApiPracticeeUsingUseState/> */}
       {/* <State/> */}
-      <UseConcepts/>
+      {/* <UseConcepts/> */}
+      {/* <Component/> */}
+      {/* <Destruc /> */}
+      {/* <EventFun/> */}
+<StateConcepts/>
+
     </>
   );
 }
