@@ -21,6 +21,7 @@ import "./App.css";
 // import MovieWebMaintainer from "./Day15/MovifyWeb";
 // import PropsConcp from "./Day15/Props/PropsConcept";
 // import ApiPracticeeUsingUseState from "./Day16/ApiRev";
+import UseConcepts from "./Day19/UseStateConcepts";
 import State from "./Day17/MainComp";
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
       {/* <MovieWebMaintainer/> */}
       {/* <PropsConcp/> */}
       {/* <ApiPracticeeUsingUseState/> */}
-      <State/>
+      {/* <State/> */}
+      <UseConcepts/>
     </>
   );
 }
