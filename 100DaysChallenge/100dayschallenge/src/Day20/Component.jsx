@@ -1,9 +1,15 @@
 import React from 'react'
+import Revision from './Revised';
 class NextWayFunction extends React.Component{
         render(){
             return(
-                <><h1>sagar</h1></>
-            )
+
+                <div>
+
+                    <h1>sagar</h1>
+                    <Revision/>
+                </div>
+                )
         }
 }
 
