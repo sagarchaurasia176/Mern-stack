@@ -10,10 +10,10 @@ const ImgBird = [
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatJf8XNdqVGTLah4ZFmNZtTbS0GeOXZ1hPNc5iVb-Vxdeh2fRPsRmbU0OmVMczOeiH7I&usqp=CAU'
     }
 ]
- 
+
 export default function StateConcepts() {
-    const [set , setImg] = useState(0);
-    setImg((image)=>(image))
+    const [set, setImg] = useState(0);
+    setImg((image) => (image))
     return (
         <>
             <div className="container">

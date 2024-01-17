@@ -25,7 +25,8 @@ import "./App.css";
 // import UseConcepts from "./Day19/State";
 // import EventFun from './Day19/EventProps/Event';
 // import UseConcepts from './Day19/State';
-  import StateConcepts from './Day19/StateConcepts/State';
+  // import StateConcepts from './Day19/StateConcepts/State';
+  import NextWayFunction from './Day20/Component';
 function App() {
   return (
     <>
@@ -53,8 +54,8 @@ function App() {
       {/* <Component/> */}
       {/* <Destruc /> */}
       {/* <EventFun/> */}
-<StateConcepts/>
-
+{/* <StateConcepts/> */}
+      <NextWayFunction/>
     </>
   );
 }
