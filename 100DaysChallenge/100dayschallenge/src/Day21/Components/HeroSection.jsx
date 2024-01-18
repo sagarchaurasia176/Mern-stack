@@ -46,8 +46,11 @@ export default function HeroPage() {
 
   const addHandler = () => {
     setProducts(products + 1);
-    <Cart dtl={products}></Cart>;
   };
+
+//error 
+<Cart dtl={products}></Cart>;
+
 
   return (
     <>
