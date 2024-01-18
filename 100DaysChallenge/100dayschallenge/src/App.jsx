@@ -26,8 +26,10 @@ import "./App.css";
 // import EventFun from './Day19/EventProps/Event';
 // import UseConcepts from './Day19/State';
   // import StateConcepts from './Day19/StateConcepts/State';
-  import NextWayFunction from './Day20/Component';
-function App() {
+  // import NextWayFunction from './Day20/Component';
+
+import Togle from './Day21/Toggle';
+  function App() {
   return (
     <>
       {/* <Array/> */}
@@ -55,7 +57,11 @@ function App() {
       {/* <Destruc /> */}
       {/* <EventFun/> */}
 {/* <StateConcepts/> */}
-      <NextWayFunction/>
+      {/* <NextWayFunction/> */}
+      <Togle/>
+
+
+
     </>
   );
 }

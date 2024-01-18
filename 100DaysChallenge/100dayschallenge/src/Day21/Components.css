@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.containerNavbar {
+  background-color: rgb(231, 238, 249);
+  display: flex;
+  width: 90%;
+  color: black;
+  margin: 0 auto;
+  padding: 1.2rem;
+  justify-content: space-between;
+}
+.container .text {
+  /* padding: 0.1rem; */
+  font-size: 1.2rem;
+  font-weight: bolder;
+  /* text-align: center; */
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(0, 0, 0);
+  /* float:right; */
+}
+
+.container .fa-cart-shopping {
+  font-size: 1.1rem;
+  color: red;
+  /* position: relative; */
+}
+.container .fa-cart-shopping  p{
+  color: black;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 2fr);
+  column-gap: 12px;
+
+  padding: 1.1rem;
+}
+button {
+  padding: 1.1rem;
+  background-color: aquamarine;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    display: block;
+  }
+}
+
+sup{
+  color: black;
+}
