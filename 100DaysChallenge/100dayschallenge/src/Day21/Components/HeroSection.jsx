@@ -38,6 +38,7 @@ const Data = [
     ProductImg:
       "https://m.media-amazon.com/images/I/617rprfdhRL._AC_UY327_FMwebp_QL65_.jpg",
     productPrice: "₹40000",
+    dtl:'sa',
   },
 ];
 
