@@ -27,8 +27,8 @@ import "./App.css";
 // import UseConcepts from './Day19/State';
   // import StateConcepts from './Day19/StateConcepts/State';
   // import NextWayFunction from './Day20/Component';
-
-import Togle from './Day21/Toggle';
+// import Togle from './Day21/Toggle';
+import Lapify from './Day22/Lapify';
   function App() {
   return (
     <>
@@ -58,10 +58,8 @@ import Togle from './Day21/Toggle';
       {/* <EventFun/> */}
 {/* <StateConcepts/> */}
       {/* <NextWayFunction/> */}
-      <Togle/>
-
-
-
+      {/* <Togle/> */}
+      <Lapify/>
     </>
   );
 }
