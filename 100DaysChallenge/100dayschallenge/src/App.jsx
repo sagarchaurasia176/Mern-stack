@@ -28,8 +28,9 @@ import "./App.css";
   // import StateConcepts from './Day19/StateConcepts/State';
   // import NextWayFunction from './Day20/Component';
 // import Togle from './Day21/Toggle';
-import Lapify from './Day22/Lapify';
-  function App() {
+// import Lapify from './Day22/Lapify';
+import Projects from './Day23/Project';
+function App() {
   return (
     <>
       {/* <Array/> */}
@@ -59,7 +60,8 @@ import Lapify from './Day22/Lapify';
 {/* <StateConcepts/> */}
       {/* <NextWayFunction/> */}
       {/* <Togle/> */}
-      <Lapify/>
+      {/* <Lapify/> */}
+      <Projects/>
     </>
   );
 }

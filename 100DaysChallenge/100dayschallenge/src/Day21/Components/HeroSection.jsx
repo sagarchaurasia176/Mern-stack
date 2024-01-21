@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cart from "./Cart";
+ import Cart from "./Cart";
 const Data = [
   {
     name: "Acer Laptop",
@@ -38,7 +38,7 @@ const Data = [
     ProductImg:
       "https://m.media-amazon.com/images/I/617rprfdhRL._AC_UY327_FMwebp_QL65_.jpg",
     productPrice: "₹40000",
-    dtl:'sa',
+    dtl: 'sa',
   },
 ];
 
@@ -47,14 +47,11 @@ export default function HeroPage() {
 
   const addHandler = () => {
     setProducts(products + 1);
-  };
-
-//error 
-<Cart dtl={products}></Cart>;
-
+};
 
   return (
     <>
+    <Cart products={products}/>
       <div class="card">
         {Data.map((productDlt) => (
           <>

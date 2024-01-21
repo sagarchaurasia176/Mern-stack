@@ -1,10 +1,9 @@
-export default function Cart(props) {
+export default function Cart({products}) {
   // const { products } = props;
   return (
     <>
-      <i class="fa-solid fa-cart-shopping">
-        {/* <sup>{products}</sup>  */}
-      </i>
+    <p>Your catalog Item is{products}</p>
+      {/* <i class="fa-solid fa-cart-shopping"/>{products} */}
     </>
   );
 }

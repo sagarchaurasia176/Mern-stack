@@ -1,4 +1,3 @@
-import Cart from "./Cart"
 import ButtonDark from "./Dark"
 export default function Navabar() {
     return (
@@ -8,7 +7,10 @@ export default function Navabar() {
 
                 <div className="text">Lapy-Shop
                 </div>
-                <Cart />
+                <item >
+                 <i class="fa-solid fa-cart-shopping"/>
+                </item>
+                
             </div >
         </>
 
