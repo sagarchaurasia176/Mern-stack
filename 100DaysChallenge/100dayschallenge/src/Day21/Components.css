@@ -62,11 +62,7 @@ sup{
   background-color: aliceblue;
 }
 
-div .fa-lightbulb .dark{
+div .dark{
   background-color: white;
   color:  black;
-}
-button .fa-lightbulb .white{
-  background-color: black;
-  color: white;
 }

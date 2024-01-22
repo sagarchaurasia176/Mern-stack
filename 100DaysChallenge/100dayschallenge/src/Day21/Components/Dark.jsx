@@ -1,27 +1,29 @@
-import { useState } from 'react';
-import '../Components.css';
+import { useState } from "react";
+import "../Components.css";
 
 export default function ButtonDark() {
-
     //apply the usestate concepts
-    const [change, setChange] = useState(false);
+    const [change, setChange] = useState();
     const toggleChange = () => {
-        setChange(!change);
-    }
-
-
-    
+        change == 'light' ? setChange('dark') : setChange('');
+    };
     return (
         <>
             <div>
                 {/* //apply the conditions */}
+              
+              
                 <button className={change ? "dark" : "white"}>
-                    {change ? <i class="fa-regular fa-lightbulb">
-                    </i> : <i class="fa-solid fa-lightbulb"></i>}</button>
+                    {change ? (
+                        <i class="fa-regular fa-lightbulb"></i>
+                    ) : (
+                        <i class="fa-solid fa-lightbulb"></i>
+                    )}
+                </button>
+
+
+
             </div>
-
         </>
-
-    )
+    );
 }
-
