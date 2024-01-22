@@ -1,8 +1,10 @@
-import CheckData from "./Components/Data"
-export default function DataPassCheck() {
+// import CheckData from "./Components/Data"
+import Modes from "./DarkEffect/DarkMode"
+ export default function DataPassCheck() {
     return (
         <>
-            <CheckData name="PROPS DATA PASS AND UI WILL CHANGE" />
+        <Modes/>
+            {/* <CheckData name="PROPS DATA PASS AND UI WILL CHANGE" /> */}
 
         </>
     )
