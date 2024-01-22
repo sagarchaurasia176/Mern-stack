@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import "./App.css";
 // import Oroperator from "./Day7/Oroperator";
 // import Array from '../src/Day3/Array'
@@ -25,12 +25,13 @@ import "./App.css";
 // import UseConcepts from "./Day19/State";
 // import EventFun from './Day19/EventProps/Event';
 // import UseConcepts from './Day19/State';
-  // import StateConcepts from './Day19/StateConcepts/State';
-  // import NextWayFunction from './Day20/Component';
+// import StateConcepts from './Day19/StateConcepts/State';
+// import NextWayFunction from './Day20/Component';
 // import Togle from './Day21/Toggle';
 // import Lapify from './Day22/Lapify';
-import Projects from './Day23/Project';
-import ButtonDark from './Day21/Components/Dark';
+// import Projects from './Day23/Project';
+// import ButtonDark from './Day21/Components/Dark';
+import DataPassCheck from './Day24/MainRev';
 function App() {
   return (
     <>
@@ -58,11 +59,15 @@ function App() {
       {/* <Component/> */}
       {/* <Destruc /> */}
       {/* <EventFun/> */}
-{/* <StateConcepts/> */}
+      {/* <StateConcepts/> */}
       {/* <NextWayFunction/> */}
       {/* <Togle/> */}
       {/* <Lapify/> */}
-      <Projects/>
+      {/* <Projects/> */}
+      {/* <LightMode/> */}
+      {/* <DataSend/> */}
+      <DataPassCheck />
+
     </>
   );
 }
