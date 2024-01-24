@@ -33,7 +33,7 @@ import "./App.css";
 // import ButtonDark from './Day21/Components/Dark';
 // import DataPassCheck from './Day24/MainRev';
 // import Modes from './Day24/DarkEffect/DarkMode';
-import Ternary from './Day24/OperationsPerformed/Ternary';
+// import Ternary from './Day24/OperationsPerformed/Ternary';
 function App() {
   return (
     <>
@@ -70,8 +70,9 @@ function App() {
       {/* <DataSend/> */}
       {/* <DataPassCheck /> */}
       {/* <Modes/> */}
-      <Ternary/>
+      {/* <Ternary/> */}
     </>
+          
   );
 }
 
