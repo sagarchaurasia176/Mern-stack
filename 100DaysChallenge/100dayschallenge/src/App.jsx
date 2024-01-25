@@ -34,6 +34,9 @@ import "./App.css";
 // import DataPassCheck from './Day24/MainRev';
 // import Modes from './Day24/DarkEffect/DarkMode';
 // import Ternary from './Day24/OperationsPerformed/Ternary';
+// import Moviefys from './Day14/Movify';
+// import Lapify from './Day22/Lapify';
+import ReactInterview from './Day26/ReactInterview';
 function App() {
   return (
     <>
@@ -71,6 +74,9 @@ function App() {
       {/* <DataPassCheck /> */}
       {/* <Modes/> */}
       {/* <Ternary/> */}
+      {/* <Lapify/> */}
+      {/* <Moviefys/> */}
+      <ReactInterview/>
     </>
           
   );

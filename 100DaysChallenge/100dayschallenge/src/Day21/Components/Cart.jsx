@@ -1,9 +1,14 @@
-export default function Cart({ products }) {
-  // const { products } = props;
+import React from 'react'
+
+function Cart(props) {
+    const {DataStored} = props;
   return (
-    <>
-      <p>Your catalog Item is{products}</p>
-      {/* <i class="fa-solid fa-cart-shopping"/>{products} */}
-    </>
-  );
+     <>
+        <i class="fa-solid fa-cart-shopping">
+            <sup>{DataStored}</sup>
+        </i>
+     </>
+  )
 }
+
+export default Cart

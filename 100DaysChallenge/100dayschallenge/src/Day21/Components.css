@@ -34,17 +34,20 @@ p {
 }
 
 .card {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 2fr);
-  column-gap: 12px;
-
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: repeat(2, 2fr); */
+  /* column-gap: 12px; */
+  justify-content: space-between;
+  align-items: center;
   padding: 1.1rem;
 }
 button {
   padding: 1.1rem;
   background-color: aquamarine;
   border: none;
+  text-align: center;
+  flex: 1;
   cursor: pointer;
   border-radius: 12px;
 }

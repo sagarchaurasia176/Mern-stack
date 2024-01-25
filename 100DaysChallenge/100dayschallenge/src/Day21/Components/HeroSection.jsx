@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cart from "./Cart";
+import Button from "./Button";
 const Data = [
   {
     name: "Acer Laptop",
@@ -43,15 +43,10 @@ const Data = [
 ];
 
 export default function HeroPage() {
-  let [products, setProducts] = useState(0);
-
-  const addHandler = () => {
-    setProducts(products + 1);
-  };
-
   return (
     <>
       <div class="card">
+
         {Data.map((productDlt) => (
           <>
             <image>
@@ -60,7 +55,7 @@ export default function HeroPage() {
               <p>
                 <b>{productDlt.productPrice}</b>
               </p>
-              <button onClick={addHandler}>Add To cart</button>
+              <Button/>
             </image>
           </>
         ))}
