@@ -65,7 +65,22 @@ sup{
   background-color: aliceblue;
 }
 
-div .dark{
-  background-color: white;
-  color:  black;
+.container .light {
+  cursor: pointer;
+  background-color: #ffffff; /* Light background color */
+  color: #000000; /* Dark text color for better readability on light background */
 }
+
+/* Dark Theme */
+  .dark 
+{
+  cursor: pointer;
+  background-color: #000000; /* Dark background color */
+  color: #ffffff; /* Light text color for better readability on dark background */
+}
+.light{
+  cursor: pointer;
+  background-color: #ffffff; /* Dark background color */
+  color: black;
+}
+ 

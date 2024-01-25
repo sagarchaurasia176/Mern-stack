@@ -36,7 +36,8 @@ import "./App.css";
 // import Ternary from './Day24/OperationsPerformed/Ternary';
 // import Moviefys from './Day14/Movify';
 // import Lapify from './Day22/Lapify';
-import BgChanger from './Day26/BgChangerProject/BgChanger';
+// import BgChanger from './Day26/BgChangerProject/BgChanger';
+import Lapify from './Day22/Lapify';
 function App() {
 
   return (
@@ -77,7 +78,8 @@ function App() {
       {/* <Ternary/> */}
       {/* <Lapify/> */}
       {/* <Moviefys/> */}
-      <BgChanger/>
+      {/* <BgChanger/> */}
+      <Lapify/>
     </>
           
   );
