@@ -36,8 +36,9 @@ import "./App.css";
 // import Ternary from './Day24/OperationsPerformed/Ternary';
 // import Moviefys from './Day14/Movify';
 // import Lapify from './Day22/Lapify';
-import ReactInterview from './Day26/ReactInterview';
+import BgChanger from './Day26/BgChangerProject/BgChanger';
 function App() {
+
   return (
     <>
       {/* <Array/> */}
@@ -76,7 +77,7 @@ function App() {
       {/* <Ternary/> */}
       {/* <Lapify/> */}
       {/* <Moviefys/> */}
-      <ReactInterview/>
+      <BgChanger/>
     </>
           
   );
