@@ -1,10 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
+import Mode from "./Component/Mode";
+// import State from "./Component/State";
 function App() {
-  const [colorChange, setcolorChange] = useState("white");
+  // const [colorChange, setcolorChange] = useState("white");
   return (
     <>
-      <h1 className=" text-center">color changer</h1>
+      {/* <h1 className=" text-center">color changer</h1>
       <div className=" h-screen w-full p-3  inset-x-3  px-1  inline-grid"
         style={{ backgroundColor: colorChange }} >
 
@@ -62,7 +64,9 @@ function App() {
           style={{ backgroundColor: "aqua" }}
         >aqua</button>
 
-      </div>
+      </div> */}
+      <Mode/>
+      {/* <State /> */}
     </>
   )
 }

@@ -1,0 +1,5 @@
+- let start to discuss about the state
+-useState -> 
+is basically contained the value and the functions and due to this you can changed or apply some concepts 
+-useEffect ->
+is basically used 
