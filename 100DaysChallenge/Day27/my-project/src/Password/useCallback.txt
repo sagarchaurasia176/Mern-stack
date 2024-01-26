@@ -1,0 +1,10 @@
+-- used to re-render in the functions
+You need to pass two things to useCallback:
+useCallback(Fn , depend){
+
+}
+
+it's let you sybchronizing with effects
+useEffect()=>{
+
+}

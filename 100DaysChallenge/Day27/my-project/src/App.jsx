@@ -1,10 +1,9 @@
 import './App.css'
-
-function App() {
-
+import Generator from './Password/Generator'
+function App() {  
   return (
     <>
-
+        <Generator/>
     </>
   )
 }
