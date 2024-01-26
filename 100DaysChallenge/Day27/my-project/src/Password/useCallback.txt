@@ -1,10 +1,12 @@
 -- used to re-render in the functions
-You need to pass two things to useCallback:
+
 useCallback(Fn , depend){
-
+You need to pass two things to useCallback:
+    it memorize the data
 }
 
-it's let you sybchronizing with effects
 useEffect()=>{
+it's let you sybchronizing with effects
 
 }
+usedRef() its' provide the reference value
