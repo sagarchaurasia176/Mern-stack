@@ -1,0 +1,12 @@
+.par{
+    color:  black;
+    background:red;
+    padding: 2.1rem;
+}
+
+@media screen and (max-width:768px){
+    .todoBox {
+        width: 100%;
+        max-width: 1200px;
+    }
+}
