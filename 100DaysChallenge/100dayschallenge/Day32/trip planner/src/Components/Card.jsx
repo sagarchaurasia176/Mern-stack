@@ -1,9 +1,10 @@
 import React from "react";
-
-function Card({ id, name, image, price, info }) {
+function Card({ id, name, image, info, price }) {
   return (
-   
-   <div className="cardComponents bg-slate-50 p-3 w-1/3">
+    <div
+      className="cardComponents
+     bg-slate-50 p-1 w-5/6 "
+    >
       <div className="img-of-card">
         <img className=" w-80  ml-1 rounded-md" src={image} alt="" />
       </div>
@@ -20,9 +21,6 @@ function Card({ id, name, image, price, info }) {
         Not-Interested{" "}
       </button>
     </div>
-
-
   );
 }
-
 export default Card;
