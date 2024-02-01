@@ -1,5 +1,6 @@
 import React from "react";
-function Card({ id, name, image, info, price }) {
+function Card({ id, name, image, info, price ,  notInterestedHandlers}) {
+
   return (
     <div
       className="cardComponents
@@ -14,11 +15,13 @@ function Card({ id, name, image, info, price }) {
       </div>
       <em>₹{price}</em>
       <span className=" text-blue-500 cursor-pointer">Read More</span>
-      <button className=" bg-red-600 rounded-md shadow-md text-white p-2 w-4/6 justify-center ml-12 flex">
+      {/* <button className=" bg-red-600 rounded-md shadow-md text-white p-2 w-4/6 justify-center ml-12 flex">
         Interested{" "}
-      </button>
-      <button className=" bg-blue-800 rounded-md shadow-md text-white p-2 w-4/6 justify-center ml-12 flex ">
-        Not-Interested{" "}
+      </button> */}
+      <button
+        onClick={ ()=>{notInterestedHandlers(id)} }
+         className=" bg-blue-800 rounded-md shadow-md text-white p-2 w-4/6 justify-center ml-12 flex ">
+        Not-Interested
       </button>
     </div>
   );
