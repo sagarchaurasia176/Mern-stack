@@ -7,9 +7,9 @@ export default function SearchItem() {
     //this btn is mostly used as for the getting the arrays of the obj by using the spread operator     
     const addBtn = () => {
         if(!useCallback){
-            console.log("empty...")
         }else{
                 setInput([...userInput , userTextWritten]);
+                setUser('')
         }
     }
     const dltItem = (currIndx) => {
