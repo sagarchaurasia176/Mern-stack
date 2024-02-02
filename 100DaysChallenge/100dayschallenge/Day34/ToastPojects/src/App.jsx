@@ -1,10 +1,10 @@
 import './App.css'
-import Seach from './Components/Seach'
+import TopMainCoursePage from './TopCourses/TopMainCoursePage'
 function App() {
 
   return (
     <>
-      <Seach/>
+      <TopMainCoursePage/>
     </>
   )
 }

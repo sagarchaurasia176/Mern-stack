@@ -1,0 +1,4 @@
+-class based component
+-component did mount
+-component did update
+-component will unMount

@@ -1,5 +1,11 @@
 useEffect - basically means like to the handle the  sideEffect 
-this hook allows us to handle the  side effect rendering 
-this allows- api , dom allow , text change , 
+this hook allows us to handle the  side effect handler
+this allows- api , dom allow , text change , http request
 
 
+what is the
+useState - IT RETURN we intailize the value , function
+
+useEffect - it return the after rendering of the component then you can used the useEffect 
+IT basically mean after rendering the component then we used the useEffect
+current component then after you can used the useEffect
