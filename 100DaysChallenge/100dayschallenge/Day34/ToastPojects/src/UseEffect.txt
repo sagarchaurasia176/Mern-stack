@@ -1,0 +1,5 @@
+useEffect - basically means like to the handle the  sideEffect 
+this hook allows us to handle the  side effect rendering 
+this allows- api , dom allow , text change , 
+
+
