@@ -5,9 +5,13 @@ import ButtonData from "./Button";
 import { toast } from "react-toastify";
 import Card from "./Card";
 import Spinner from "./Spinner";
+
 function TopMainCoursePage() {
   const [apiDataset, setData] = useState([]);
   const [load, setLoad] = useState(true);
+  
+  const [cate , setCate] = useState(filterData[0].title)
+
 
   //API cALLING
   const ApiData = async () => {
@@ -33,11 +37,11 @@ function TopMainCoursePage() {
   return (
     <>
       <Navbar />
-      <ButtonData filterData={filterData} />
+      <ButtonData filterData={filterData} cate = {cate} setCate = {setCate} />
       <div className="conatiner   flex flex-wrap m-auto  rounded-r-md w-5/6 h-auto">
         <div className="grid grid-cols-3 p-5 text-center gap-3 text-black">
           {/* how the spinner and card willl come while at the one time  */}
-          {load ? <Spinner /> : <Card apiDataset = {apiDataset} />}
+          {load ? <Spinner /> : <Card apiDataset = {apiDataset}  cate = {cate}/>}
         </div>
       
       </div>
