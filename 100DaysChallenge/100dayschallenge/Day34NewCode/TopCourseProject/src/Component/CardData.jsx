@@ -20,9 +20,9 @@ function CardData(props) {
     
     return (
         <>
-            {allDataRetrivedFromTheObject().map((values) => {
-                <Card key={values.id} course={values} />;
-            })}
+            {allDataRetrivedFromTheObject().map((values) => (
+                <Card key={values.id} course={values} />
+            )) }
         </>
     );
 }
