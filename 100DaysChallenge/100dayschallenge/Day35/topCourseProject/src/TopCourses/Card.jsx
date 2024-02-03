@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcLikePlaceholder } from "react-icons/fc";
+import { toast } from "react-toastify";
+import { FcLike } from "react-icons/fc";
+
 function Card(props) {
   let apiDataset = props.apiDataset;
   //convert into the single array of object
@@ -13,6 +16,34 @@ function Card(props) {
     });
     return apiConvertIntoSingleArray;
   };
+
+
+
+  //liked btn tricks
+  const[liked , setLike] = useState([])
+
+  const LikedBtn =()=>{
+
+        if(liked.includes(apiDataset.id)){
+            setLike( (prev) => prev.filter( (cid)=>(cid !== apiDataset.id)));
+            toast.error("Like removed");
+        }
+          else{
+              if(liked.length === 0){
+                setLike([apiDataset.id]);
+              }
+              else{
+                setLike((pre) => [...pre , apiDataset.id]);
+              }
+              toast.success("liked Succesfully");
+          }
+
+    }
+
+  
+    const buyNow=()=>{
+          toast.success("Great job")
+    }
 
   return (
     <>
@@ -28,15 +59,23 @@ function Card(props) {
             
             {/* click the like button */}
             <div className=" grid place-items-center w-[30px] h-[30px] bg-white rounded-full absolute top-[149.4px] right-2">
-            <FcLikePlaceholder/>
-            </div>
+           
 
+
+
+            <button onClick={LikedBtn}>
+              {liked.includes(apiDataset.id) ?  (<FcLike/>) : (<FcLikePlaceholder/>) }
+            </button>
+            </div>
 
 
             <span className=" text-center text-black  p-2   space-y-3 font-semibold ">{cardDatas.title}</span>
             <p className=" text-center">{cardDatas.description}</p>
-          <button className=" bg-blue-800 rounded-md shadow-md text-white p-2 w-full m-auto">
-            Check Now
+          
+          <button
+            onClick={buyNow}
+          className=" bg-blue-800 rounded-md shadow-md text-white p-2 w-full m-auto">
+            Buy Now
           </button>
           </div>
 

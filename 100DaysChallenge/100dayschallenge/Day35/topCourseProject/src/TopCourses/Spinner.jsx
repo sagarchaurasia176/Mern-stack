@@ -3,8 +3,10 @@ import React from "react";
 //  import { getIcon } from 'react-toastify/dist/components'
 function Spinner() {
   return (
-    <>
-      <span class="loader"></span>
+    <>  
+      <span class="loader">
+      </span>
+      <p className=" text-white">loading</p>
     </>
   );
 }
