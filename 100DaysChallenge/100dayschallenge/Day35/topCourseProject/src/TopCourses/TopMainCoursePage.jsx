@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import Card from "./Card";
 import Spinner from "./Spinner";
 function TopMainCoursePage() {
-  const [apiDataset, setData] = useState(null);
+  const [apiDataset, setData] = useState([]);
   const [load, setLoad] = useState(true);
 
   //API cALLING
@@ -34,11 +34,12 @@ function TopMainCoursePage() {
     <>
       <Navbar />
       <ButtonData filterData={filterData} />
-      <div className="conatiner bg-white  m-auto  rounded-r-md w-5/6 h-auto">
-        <div className="grid grid-cols-3 p-3 text-center gap-3 text-black">
+      <div className="conatiner   flex flex-wrap m-auto  rounded-r-md w-5/6 h-auto">
+        <div className="grid grid-cols-3 p-5 text-center gap-3 text-black">
           {/* how the spinner and card willl come while at the one time  */}
           {load ? <Spinner /> : <Card apiDataset = {apiDataset} />}
         </div>
+      
       </div>
     </>
   );
