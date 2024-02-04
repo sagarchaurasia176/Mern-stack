@@ -4,8 +4,6 @@ import { toast } from "react-toastify";
 import { FcLike } from "react-icons/fc";
 
 function Card(props) {
-
-
   const LikedBtn = () => {
     if (liked.includes(apiDataset.id)) {
       setLike((prev) => prev.filter((cid) => cid !== apiDataset.id));
@@ -19,41 +17,30 @@ function Card(props) {
       toast.success("liked Succesfully");
     }
   };
-
   const buyNow = () => {
     toast.success("Great job");
   };
-
-
-
-
-
-  let apiDataset = props.apiDataset;
-  let cate = props.cate;
-  //liked btn tricks
+  //api data set 
   const [liked, setLike] = useState([]);
+  const apiDataset = props.apiDataset;
+  // let cate = props.cate;
   //convert into the single array of object
   const convertDataIntoSingleArrayObj = () => {
-    if (cate === "All course") {
-      let apiConvertIntoSingleArray = [];
-
+      const apiConvertIntoSingleArray = [];
       Object.values(apiDataset).forEach((data) => {
         data.forEach((valueOfData) => {
           apiConvertIntoSingleArray.push(valueOfData);
         });
+      
       });
       return apiConvertIntoSingleArray;
-    } else {
-      return apiDataset[cate];
+
     }
-  };
 
 
   return (
     <>
-      {
-      
-        convertDataIntoSingleArrayObj().map((cardDatas) => (
+      {convertDataIntoSingleArrayObj().map((cardDatas) => (
         <div
           key={cardDatas.id}
           className="cardComponents flex flex-wrap rounded-md shadow-lg 
@@ -98,5 +85,7 @@ function Card(props) {
     </>
   );
 }
+
+
 
 export default Card;

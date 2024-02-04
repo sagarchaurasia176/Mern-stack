@@ -9,8 +9,8 @@ import Spinner from "./Spinner";
 function TopMainCoursePage() {
   const [apiDataset, setData] = useState([]);
   const [load, setLoad] = useState(true);
-  
-  const [cate , setCate] = useState(filterData[0].title)
+    // const [cate , setCate] = useState(filterData[0].title)
+  // const [category , setCategory] = useState(filterData[0].title);
 
 
   //API cALLING
@@ -37,11 +37,11 @@ function TopMainCoursePage() {
   return (
     <>
       <Navbar />
-      <ButtonData filterData={filterData} cate = {cate} setCate = {setCate} />
+      <ButtonData filterData={filterData} />
       <div className="conatiner   flex flex-wrap m-auto  rounded-r-md w-5/6 h-auto">
         <div className="grid grid-cols-3 p-5 text-center gap-3 text-black">
           {/* how the spinner and card willl come while at the one time  */}
-          {load ? <Spinner /> : <Card apiDataset = {apiDataset}  cate = {cate}/>}
+          {load ? <Spinner /> : <Card apiDataset = {apiDataset}   />}
         </div>
       
       </div>
