@@ -1,11 +1,9 @@
 import './App.css'
-
+import MainPage from './Testmonials/MainPage'
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-     
+      <MainPage/>
     </>
   )
 }
