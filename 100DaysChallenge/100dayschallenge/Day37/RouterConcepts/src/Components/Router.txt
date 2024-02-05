@@ -1,0 +1,17 @@
+How to used the React Router jsx
+
+
+1-react i
+2- click to browser router
+3- Browser Router basename [file]
+4- imp {BrowserRoute , Routes , Route} from 're-r-d"
+5-<>
+<BrowserRouter>
+<Routes>
+<Route pathe ='/' element = {<Home/>} />
+
+</Routes>
+
+
+</BR>
+</>

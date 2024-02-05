@@ -1,12 +1,26 @@
 import './App.css'
-import Navbar from './Navbar'
+import { Routes, Route } from "react-router-dom";
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Home from './Components/Home';
+import Navbar from './Components/Navbar';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-      <Navbar/>
+      <div className=" w-full p-2">
+        <Navbar />
+      </div>
+
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/About" element={<About />}></Route>
+        <Route path="/Contact" element={<Contact />}></Route>
+      </Routes>
+
+
+
+
     </>
   )
 }
