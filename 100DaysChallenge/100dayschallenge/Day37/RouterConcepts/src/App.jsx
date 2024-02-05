@@ -4,19 +4,22 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
+import Product from '../src/Components/ProductPage'
+
 
 function App() {
   return (
     <>
-      <div className=" w-full p-2">
         <Navbar />
-      </div>
-
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/About" element={<About />}></Route>
         <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/Product" element={<Product/>}></Route>
       </Routes>
+
+
+      
 
 
 
