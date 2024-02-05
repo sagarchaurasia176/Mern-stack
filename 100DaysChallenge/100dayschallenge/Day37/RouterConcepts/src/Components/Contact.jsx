@@ -1,11 +1,11 @@
 import React from 'react'
+import MainPage from '../../../../Day36WillContinueInDay35Project/testimonaial/src/Testmonials/MainPage'
 
 function Contact() {
   return (
-  <>
-        <h1>This is contact Page</h1>
-  
-  </>
+    <>
+      <MainPage/>
+    </>
   )
 }
 

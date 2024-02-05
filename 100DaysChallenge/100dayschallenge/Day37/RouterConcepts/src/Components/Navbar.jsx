@@ -13,7 +13,7 @@ function Navbar() {
         <div className=" w-28">
           <img className=" w-60" src={Logo} alt="" />
         </div>
-        <ul className=" text-black text- flex justify-center  space-x-20">
+        <ul className=" text-black font-medium text- flex justify-center  space-x-20">
           <li>
             <NavLink to="/">Home </NavLink>
           </li>
@@ -21,7 +21,7 @@ function Navbar() {
             <NavLink to="/About">About </NavLink>
           </li>
           <li>
-            <NavLink to="/Contact">Contact</NavLink>
+            <NavLink to="/Contact">Testimonials</NavLink>
           </li>
 
           <li>
@@ -34,6 +34,8 @@ function Navbar() {
           <FaLocationArrow />
           </p>
         </button>
+        
+
 
       
       </div>
