@@ -1,0 +1,8 @@
+what you used in this project
+-useState
+-useEffect
+-filter
+-toast
+-map
+-dropdown filter
+-rest api
