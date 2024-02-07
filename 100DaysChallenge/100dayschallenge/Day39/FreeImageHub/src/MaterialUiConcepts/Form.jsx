@@ -1,86 +1,98 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
-    TextField, Button, Container, Typography, Table,
-    TableBody, TableCell,  TableHead, TableRow,
+  TextField,
+  Button,
+  Container,
+  Typography,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
 } from "@mui/material";
+
 function Forms() {
-    //state write into the functiions
-    const [input, setInput] = useState(null)
-    const hireme = (e) => {
-        e.preventDefault();
-            
-    }
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-    return (
-        <>
-            <form>
-                <Typography
-                    sx={{ textAlign: "center", fontSize: "3rem", fontFamily: "bold" }}>
-                    Login
-                </Typography>
-                <Container sx={{ textAlign: "center", margin: "12px" }}>
-                    <TextField
-                        name="name"
-                        value={input}
-                        type="text"
-                        onChange={(e) => { e.target.value }}
-                        placeholder="username"
-                    />
-                    <TextField
-                        // value={input.Email}
-                        name="Email"
-                        type=" email"
-                        onChange={(e) => { e.target.value }}
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
+  };
 
-                        placeholder="Email"
-                    />
-                    <TextField
+  const hireme = (e) => {
+      handleChange()
+  };
 
-                        // value={input.Password}
-                        name="Password"
-                        type=" password"
-                        onChange={(e) => { e.target.value }}
+  
 
-                        placeholder="Password"
-                    />
-                    <br />
-                    <Button onClick={hireme}>Hire Me</Button>
-                </Container>
-            </form>
+  return (
+    <>
+      <form onSubmit={hireme}>
+        <Typography
+          sx={{ textAlign: "center", fontSize: "3rem", fontFamily: "bold" }}
+        >
+          Login
+        </Typography>
+        <Container sx={{ textAlign: "center", margin: "12px" }}>
+          <TextField
+            name="name"
+            value={input.name}
+            type="text"
+            onChange={handleChange}
+            placeholder="username"
+          />
+          <TextField
+            name="email"
+            value={input.email}
+            type="email"
+            onChange={handleChange}
+            placeholder="Email"
+          />
+          <TextField
+            name="password"
+            value={input.password}
+            type="password"
+            onChange={handleChange}
+            placeholder="Password"
+          />
+          <br />
+          <Button type="submit">Hire Me</Button>
+        </Container>
+      </form>
+
+      <h2 className="text-center text-white font-semibold text-[2rem]">
+        Your Details
+      </h2>
+      <br />
 
 
 
 
-
-
-            <h2 className=" text-center text-white font-semibold   text-[2rem]">Your Details</h2><br/>
- 
-            <Table sx={{width:'50%' , textAlign:'center' ,  margin:'0 auto'}}>
-                <TableHead>
-                    <TableRow>
-                        <TableCell>UserName</TableCell>
-                        <TableCell>Email</TableCell>
-                        <TableCell>Password</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    <TableRow>
-                        <TableCell>Row 1, Column 1</TableCell>
-                        <TableCell>Row 1, Column 2</TableCell>
-                        <TableCell>Row 1, Column 3</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Row 2, Column 1</TableCell>
-                        <TableCell>Row 2, Column 2</TableCell>
-                        <TableCell>Row 2, Column 3</TableCell>
-                    </TableRow>
-                </TableBody>
-
-            </Table>
-
-        </>
-    );
+      <Table sx={{ width: "50%", textAlign: "center", margin: "0 auto" }}>
+        <TableHead>
+          <TableRow>
+            <TableCell>UserName</TableCell>
+            <TableCell>Email</TableCell>
+            <TableCell>Password</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell>{input.name}</TableCell>
+            <TableCell>{input.email}</TableCell>
+            <TableCell>{input.password}</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </>
+  );
 }
 
 export default Forms;

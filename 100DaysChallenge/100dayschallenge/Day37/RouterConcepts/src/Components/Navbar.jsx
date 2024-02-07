@@ -30,14 +30,11 @@ function Navbar() {
         </ul>
 
         <button className=" flex bg-orange-600 text-white p-2 rounded-md  text-center w-24">
-          <p className=" flex transition-all  animate-pulse">Login
-          <FaLocationArrow />
+          <p className=" flex transition-all  animate-pulse">
+            Login
+            <FaLocationArrow />
           </p>
         </button>
-        
-
-
-      
       </div>
     </>
   );
