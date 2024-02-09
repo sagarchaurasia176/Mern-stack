@@ -1,12 +1,12 @@
 import "./App.css";
-import State from "./Component/State";
+import RandomUser from "./Component/RandomUser";
 
 function App() {
-return(
-    <>
-      <State/>
-    </>
-)
+    return (
+        <>
+            <RandomUser />
+        </>
+    )
 
 }
 
