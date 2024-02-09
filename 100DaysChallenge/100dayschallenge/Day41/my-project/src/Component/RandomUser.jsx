@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from "react";
-import Random from "./Random";
+// import Random from "./Random";
 import api from "./GitHub";
+import DataCheck from "./DataCheck";
 
 function RandomUser() {
-  const [Data, setData] = useState(api);
-
-  //fetch data here and then we moved to the next
-  const apiData = async () => {
-    const Datas = await fetch(Data);
-    setData(await Datas.json());
-  };
-
-  //calling to the api data
+  const [data, setData] = useState([]);
+  //useEffect data
   useEffect(() => {
-    //its call the functions once we have created
-    apiData()
-  }, []);
-
+    const datas = async () => {
+      const apiUrl = await fetch(api);
+      const resp = await apiUrl.json();
+      setData(resp.data);
+      console.log(resp);
+    };
+    datas();
+  });
+  //return this data values
   return (
     <>
-      {/* props data */}
-      <Random />
+      <DataCheck data={data} />
     </>
   );
 }
