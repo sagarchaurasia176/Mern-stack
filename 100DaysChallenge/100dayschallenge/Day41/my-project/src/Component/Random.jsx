@@ -5,7 +5,7 @@ function Random() {
       <h1 className=" text-center font-semibold">Github - Users</h1>
       <br />
       <div className="main-container gap-6  h-auto  grid grid-cols-2">
-        {data.map(() => {
+        
           <div className="grid grid-cols-2  rounded-xl gap-2 p-2 bg-black text-white">
             <div className="image  "></div>
             <div className="text  w-60">
@@ -18,8 +18,7 @@ function Random() {
               <p className=" p-1">following</p>
               <p className=" p-1">Projects</p>
             </div>
-          </div>;
-        })}
+          </div>
       </div>
     </div>
   );
