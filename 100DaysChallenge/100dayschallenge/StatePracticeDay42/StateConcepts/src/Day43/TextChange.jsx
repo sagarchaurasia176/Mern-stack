@@ -8,7 +8,7 @@ function TextChange() {
         }
 
     return (
-        <div className="  bg-white  p-2 m-2 w-80  h-32 text-black">
+        <div className="  bg-white  p-2 m-2 w-4/5  text-black">
             <h2 className=" text-center text-red-500">Text Change</h2>
             <p>change to {text}</p>
             <button className=" bg-slate-600 p-2 text-white"

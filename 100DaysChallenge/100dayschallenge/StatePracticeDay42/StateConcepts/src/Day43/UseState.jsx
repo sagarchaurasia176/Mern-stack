@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TextChange from "./TextChange";
+import Torch from "./Torch";
+import ApiState from "./ApiState";
 function UseState() {
   const [number, setNumber] = useState(0);
   return (
@@ -19,6 +21,8 @@ function UseState() {
         </button>
       </div>
           <TextChange/>
+          <Torch/>
+          <ApiState/>
       </div>
 
 
