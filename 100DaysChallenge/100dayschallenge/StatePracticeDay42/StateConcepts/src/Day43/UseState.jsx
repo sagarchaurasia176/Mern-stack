@@ -3,7 +3,8 @@ import TextChange from "./TextChange";
 import Counter from "../Day44/Counter";
 import ArrayConcept from "../Day44/ArrayConcepts";
 import DataPass from "../Day44/DataPass";
-import Random from "../Day44/Random";
+import Table from "../Day44/FetchConceptsInReactJs/Table";
+// import Random from "../Day44/Random";
 function UseState() {
   const [number, setNumber] = useState(0);
   return (
@@ -26,14 +27,11 @@ function UseState() {
         {/* <Torch/> */}
         <Counter />
         <ArrayConcept />
-        <DataPass /><br/>
+        <DataPass />
+        <br />
       </div>
-      <Random/>
-
-  
-
-
-
+      {/* <Random/> */}
+      <Table />
     </>
   );
 }
