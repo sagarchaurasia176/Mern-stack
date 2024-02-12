@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import TextChange from "./TextChange";
-import Torch from "./Torch";
-import ApiState from "./ApiState";
+import Counter from "../Day44/Counter";
+import ArrayConcept from "../Day44/ArrayConcepts";
+import DataPass from "../Day44/DataPass";
 function UseState() {
   const [number, setNumber] = useState(0);
   return (
     <>
       <h1 className=" text-center font-medium ">Hooks Series</h1>
-      <div className=" grid  grid-cols-3  bg-blue-500 ">
-      <div className="  bg-white  p-2 m-2 w-80   h-32 text-black">
+      <div className=" grid  grid-cols-3   bg-blue-500 ">
+      <div className="  bg-white  m-2 w-auto   h-32 text-black">
         <h2 className=" text-center text-red-500">simple counter</h2>
         <p>the value is {number}</p>
         <button
@@ -21,8 +22,10 @@ function UseState() {
         </button>
       </div>
           <TextChange/>
-          <Torch/>
-          <ApiState/>
+          {/* <Torch/> */}
+            <Counter/>
+            <ArrayConcept/>
+            <DataPass/>
       </div>
 
 
