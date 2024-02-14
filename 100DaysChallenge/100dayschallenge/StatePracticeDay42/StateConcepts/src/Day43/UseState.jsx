@@ -3,7 +3,8 @@ import TextChange from "./TextChange";
 import Counter from "../Day44/Counter";
 import ArrayConcept from "../Day44/ArrayConcepts";
 import DataPass from "../Day44/DataPass";
-import State from "../Day45/State";
+import State from "../Day45/UseEffects";
+import States from "../Day46/States";
 // import Random from "../Day44/Random";
 function UseState() {
   const [number, setNumber] = useState(0);
@@ -29,10 +30,10 @@ function UseState() {
         <ArrayConcept />
         <DataPass />
         <br />
-
       </div>
       <State/>
-
+            <States/>
+            
       {/* <Random/> */}
     </>
   );
