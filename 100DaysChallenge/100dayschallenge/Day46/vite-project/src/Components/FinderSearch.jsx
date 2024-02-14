@@ -1,12 +1,17 @@
 import React from 'react'
+import { CiSearch } from "react-icons/ci";
 
 function FinderSearch() {
-  return (
-    <div className=' container m-auto p-2 w-2/3 bg-slate-400'>
-            
+    return (
+        <div className=' container flex m-auto p-2 w-2/3 '>
+            <input type="text"
+                className=' w-2/3 p-2 outline-none ml-28 '
+                placeholder='type your  food here' />
+            <CiSearch
+                className='bg-white text-black size-10 cursor-pointer' />
+        </div>
 
-    </div>
-  )
+    )
 }
 
 export default FinderSearch

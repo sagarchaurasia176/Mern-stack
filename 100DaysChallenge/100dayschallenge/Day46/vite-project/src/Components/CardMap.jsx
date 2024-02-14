@@ -1,9 +1,19 @@
-import React from 'react'
+// import React from 'react'
+// import CardsData from './CardsData';
 
-function CardMap() {
-  return (
-    <div>CardMap</div>
-  )
-}
+// function CardMap(props) {
+//   const apiCheck = props.apiCheck;
+//   return (
+//     <div>
+//       {
+//         apiCheck.map((values)=>(
+//           <CardsData key={values.id} {...values}/>
+//         ))
+//   }
 
-export default CardMap
+
+//     </div>
+//   )
+// }
+
+// export default CardMap

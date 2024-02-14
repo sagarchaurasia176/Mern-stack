@@ -1,20 +1,21 @@
-import React from 'react'
+import React from "react";
 
 function Buttons(props) {
-    const btnData = props.btnData;
+  const btnData = props.btnData;
   return (
     <div>
-            {btnData.map((values)=>(
-            <button
-            className='
+      {btnData.map((values) => (
+        <button
+          key={values.id}
+          className="
             text-white
-            ml-10  pointer'
-            >{values.name}</button>
-
-            ))}
-
+            ml-10  pointer"
+        >
+          {values.name}
+        </button>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Buttons
+export default Buttons;
