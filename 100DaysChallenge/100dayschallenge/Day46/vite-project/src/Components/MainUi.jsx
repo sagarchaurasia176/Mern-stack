@@ -5,7 +5,9 @@ import FinderSearch from "./FinderSearch";
 import CardsData from "./CardsData";
 // import CardMap from "./CardMap";
 
+
 function MainUi() {
+  
   //query
   const [query, setQuery] = useState("");
   const [receipes, setReceipes] = useState([]);
@@ -20,8 +22,6 @@ function MainUi() {
     console.log(conv);
     setReceipes(conv);
   };
-  //USEeFFECT CONCEPTS
-
   useEffect(() => {
     dataFetch();
   }, []);
