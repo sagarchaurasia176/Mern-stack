@@ -3,18 +3,15 @@ import Buttons from "./Button";
 import btnData from "./ButtonData";
 import FinderSearch from "./FinderSearch";
 import CardsData from "./CardsData";
-// import CardMap from "./CardMap";
-
 
 function MainUi() {
-  
   //query
   const [query, setQuery] = useState("");
   const [receipes, setReceipes] = useState([]);
   // const[data , setDat] = useState();
 
   const apiKey = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-  
+
   const dataFetch = async () => {
     const resp = apiKey + query;
     const apiUrl = await fetch(resp);
@@ -25,8 +22,6 @@ function MainUi() {
   useEffect(() => {
     dataFetch();
   }, []);
-
-
 
   return (
     <>
@@ -43,8 +38,7 @@ function MainUi() {
       <br></br>
       <FinderSearch />
       <br></br>
-      <CardsData/>
-
+      <CardsData />
     </>
   );
 }
