@@ -20,7 +20,7 @@ function CardsData() {
   ];
 
   const [url, setUrl] = useState(
-    "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+    "https://www.themealdb.com/api/json/v1/1/search.php?f=c"
   );
   const [item, setItem] = useState(null);
 
@@ -37,14 +37,22 @@ function CardsData() {
       });
   }, [url]);
 
+
+  //api data modify
+
   const setIndex = (alpha) => {
     setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`);
   };
 
+
+  //search values here to get the data
+  const useClick = ()=>{
+    
+  }
+
+
+
   return (
-    
-    
-    
     <div className="container m-autorounded-lg">
       <div className="twice-box h-auto flex  bg-slate-50">
         <div className="box-1 text-center font-semibold">
@@ -58,11 +66,8 @@ function CardsData() {
             </div>
           ))}
         </div>
-        
-        
-        
-        
-        
+
+
         <div className="box-2 w-full grid grid-cols-3  gap-5">
           {item &&
             item.map((val) => (
@@ -72,15 +77,19 @@ function CardsData() {
               >
                 <img
                   className="  size-72 rounded-md"
-                src={val.strMealThumb} alt={val.strMeal} />
+                  src={val.strMealThumb}
+                  alt={val.strMeal}
+                />
                 <span>{val.strMeal}</span>
               </div>
+
             ))}
 
 
 
         </div>
       </div>
+      
     </div>
   );
 }

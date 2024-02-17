@@ -1,28 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Buttons from "./Button";
 import btnData from "./ButtonData";
-import FinderSearch from "./FinderSearch";
 import CardsData from "./CardsData";
+import FliterDataPass from "./FliterDataPass";
+//this is the ui page here
 
 function MainUi() {
-  //query
-  const [query, setQuery] = useState("");
-  const [receipes, setReceipes] = useState([]);
-  // const[data , setDat] = useState();
-
-  const apiKey = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-
-  const dataFetch = async () => {
-    const resp = apiKey + query;
-    const apiUrl = await fetch(resp);
-    const conv = await apiUrl.json();
-    console.log(conv);
-    setReceipes(conv);
-  };
-  useEffect(() => {
-    dataFetch();
-  }, []);
-
   return (
     <>
       <div className="btnBar w-full p-2  bg-slate-900 ">
@@ -36,7 +19,7 @@ function MainUi() {
         </div>
       </div>
       <br></br>
-      <FinderSearch />
+      <FliterDataPass/>
       <br></br>
       <CardsData />
     </>
