@@ -1,60 +1,13 @@
-import React, { useEffect, useState } from "react";
-function CardsData() {
-  const alpha = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "P",
-    "Q",
-  ];
+import React from "react";
 
-  const [url, setUrl] = useState(
-    "https://www.themealdb.com/api/json/v1/1/search.php?f=c"
-  );
-  const [item, setItem] = useState(null);
+function CardsData(props) {
 
-  useEffect(() => {
-    fetch(url)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        return setItem(data.meals);
-      })
-      .catch((error) => {
-        return console.error("Error fetching data:", error);
-      });
-  }, [url]);
-
-
-  //api data modify
-
-  const setIndex = (alpha) => {
-    setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`);
-  };
-
-
-  //search values here to get the data
-  const useClick = ()=>{
-    
-  }
-
-
+const {alpha , setIndex , item } = props;
 
   return (
     <div className="container m-autorounded-lg">
-      <div className="twice-box h-auto flex  bg-slate-50">
+
+      <div className="twice-box h-auto flex p-4 m-auto  bg-slate-50">
         <div className="box-1 text-center font-semibold">
           {alpha.map((value, index) => (
             <div
@@ -67,8 +20,7 @@ function CardsData() {
           ))}
         </div>
 
-
-        <div className="box-2 w-full grid grid-cols-3  gap-5">
+        <div className="box-2 w-full grid grid-cols-4  gap-3">
           {item &&
             item.map((val) => (
               <div
@@ -82,14 +34,9 @@ function CardsData() {
                 />
                 <span>{val.strMeal}</span>
               </div>
-
             ))}
-
-
-
         </div>
       </div>
-      
     </div>
   );
 }

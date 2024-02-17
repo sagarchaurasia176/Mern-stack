@@ -1,11 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Buttons from "./Button";
 import btnData from "./ButtonData";
 import CardsData from "./CardsData";
-import FliterDataPass from "./FliterDataPass";
+import FinderSearch from "./FinderSearch";
+// import FliterDataPass from "./FliterDataPass";
+
 //this is the ui page here
 
 function MainUi() {
+  const alpha = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "Q",
+  ];
+
+
+  const [url, setUrl] = useState("https://www.themealdb.com/api/json/v1/1/search.php?f=f");
+  const [item, setItem] = useState(null);
+
+  const[search , searchItm] = useState('')
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        return setItem(data.meals);
+      })
+      .catch((error) => {
+        return console.error("Error fetching data:", error);
+      });
+  }, [url]);
+
+  //api data modify
+
+  const setIndex = (alpha) => {
+    setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`);
+  };
+
+
+    //search call to the functions
+    const searchCall = (search)=>{
+      setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`);
+  
+}
+
+
+
   return (
     <>
       <div className="btnBar w-full p-2  bg-slate-900 ">
@@ -19,9 +74,10 @@ function MainUi() {
         </div>
       </div>
       <br></br>
-      <FliterDataPass/>
+      <FinderSearch searchCall = {searchCall} />
+      {/* <FliterDataPass/> */}
       <br></br>
-      <CardsData />
+      <CardsData alpha={alpha} setIndex={setIndex} item = {item} searchCall = {searchCall} />
     </>
   );
 }
