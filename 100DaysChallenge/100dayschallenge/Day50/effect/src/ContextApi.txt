@@ -1,0 +1,31 @@
+it's applications likes
+- themeing update
+====================================
+
+they are the differ lib
+- vue
+-redux
+-zustand
+
+========================================
+-redux :- used to manage the states
+[RTK] - redux tool kit
+
+========================================
+props drilling means to pass the props from one component to another 
+component 
+========================================
+
+why used?
+
+context api - is used to mangae the state props 
+the main advantage of this context is that you can used it to
+be the handle the props drobbling
+
+
+where to used?
+- when we want to send the data from one files to another files on that 
+you can used that things directly instead of like you can used 
+multile props.
+
+==============================================
