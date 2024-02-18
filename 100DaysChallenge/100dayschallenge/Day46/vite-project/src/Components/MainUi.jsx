@@ -31,7 +31,6 @@ function MainUi() {
   const [url, setUrl] = useState("https://www.themealdb.com/api/json/v1/1/search.php?f=f");
   const [item, setItem] = useState(null);
 
-  const[search , searchItm] = useState('')
 
   useEffect(() => {
     fetch(url)
