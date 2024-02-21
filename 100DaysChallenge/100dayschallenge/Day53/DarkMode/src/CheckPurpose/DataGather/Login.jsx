@@ -1,15 +1,11 @@
-import React, { useContext } from 'react'
+import React from "react";
 
-function Login() {
-  
-  const data = useContext();
-
+function Login({ datas }) {
   return (
     <div>
-        Login here
-      
+      <p>{datas}</p>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

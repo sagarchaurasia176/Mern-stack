@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import Login from "./CheckPurpose/DataGather/Login";
+import { dataPass } from "./CheckPurpose/DataCheck/Data";
 
 function App() {
-  const [set, dataSet] = useState("");
+  const [datas, setDatas] = useState();
 
   return (
     <>
-      <Login />
+      <dataPass.Provider value={{ datas, setDatas }}>
+        <Login />
+      </dataPass.Provider>
     </>
   );
 }

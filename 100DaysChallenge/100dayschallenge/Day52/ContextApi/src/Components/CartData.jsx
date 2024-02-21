@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import { DataPass } from "../Context/Datas";
 import "../App.css";
 import { DataPass } from "../Context/Datas";
 function CartData() {
