@@ -1,11 +1,13 @@
 import './App.css'
-import Data from './Components/Data'
+import MainHeader from './ProjectUsingContex/Components/MainHeader'
+// import Data from './Components/Data'
 
 function App() {
 
   return (
     <>
-      <Data/>
+    <MainHeader/>
+      {/* <Data /> */}
     </>
   )
 }
