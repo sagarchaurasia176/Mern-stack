@@ -6,16 +6,17 @@ function Login() {
     const [userName, setName] = useState("");
     const [userPass, setPass] = useState("");
     
+    
     //data and setData values to be get
     const { data, setData } = useContext(userContexts);
+
     //passing the data from the one files to the another files
     function dataSend(e) {
         // prevent deafualt 
         e.preventDefault();
     //provider the data passed
-        setData({ userName, userPass });
-        
-    }
+        setData({ userName, userPass });    
+}
 
 
     return (
