@@ -5,20 +5,32 @@ import Nav from "./Components/Nav";
 
 //this is your providers
 import userContexts from "./Context/Data";
+import Profile from "./Components/Profile";
+
 // import Profile from "./Components/Profile";
 //create state here and then passed to the next files
-function App() {
-const [data, setData] = useState("");
 
+
+function App() {
+
+  //firstly I created this state 
+  //and this state it's act likes the props
+  //then after it passed to the components
+  
+  const[data,setData] = useState();
+  
   return (
     <>
-      <userContexts.Provider value={{ data, setData }}>
+      <userContexts.Provider value={{data , setData}}>
         <Nav />
         <Login />
-        {/* <Profile/> */}
+        <Profile/>
       </userContexts.Provider>
+      {/* <Profile/> */}
+
     </>
-  );w
+
+);
 }
 
 export default App;

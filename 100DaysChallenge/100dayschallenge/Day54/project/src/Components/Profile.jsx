@@ -4,11 +4,16 @@ import userContexts from "../Context/Data";
 function Profile() {
     const { data } = useContext(userContexts);
 
-    if (!data) return <div><p>please login</p></div>;
+    if (!data)
+        return (
+            <div>
+                <p>please login</p>
+            </div>
+        );
 
     return (
         <div>
-            <p>Welcome {data.userName}</p>
+            <b>welcome to my web {data.userName}</b>
         </div>
     );
 }

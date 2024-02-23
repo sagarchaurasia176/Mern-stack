@@ -1,7 +1,9 @@
 import React from "react";
+import Mode from "./Mode";
 function Nav() {
   return (
     <div>
+      
       <nav class="bg-gray-800 p-4">
         <div class="container mx-auto flex justify-between items-center">
           <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -20,26 +22,11 @@ function Nav() {
             </button>
           </div>
           <div class="hidden lg:block">
-            <div class="flex">
-              <a
-                href="#"
-                class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white"
-              >
-                Contact
-              </a>
-            </div>
+           
+          <Mode/> 
+
+          {/* dark modes */}
+
           </div>
         </div>
       </nav>
