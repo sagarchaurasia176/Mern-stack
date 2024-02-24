@@ -23,9 +23,9 @@ function Nav() {
           </div>
           <div class="hidden lg:block">
            
-          <Mode/> 
 
           {/* dark modes */}
+          <Mode/> 
 
           </div>
         </div>
