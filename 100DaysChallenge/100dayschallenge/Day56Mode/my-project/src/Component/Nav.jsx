@@ -42,12 +42,7 @@ function Nav() {
           <div
             class="w-full  flex-grow lg:flex lg:items-center lg:w-auto"
             id="nav-content"
-          >
-
-         
-          </div>
-
-
+          ></div>
         </div>
       </nav>
     </>
