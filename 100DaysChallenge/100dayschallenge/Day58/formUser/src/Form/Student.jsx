@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 function Student() {
   //useState data
@@ -8,29 +8,24 @@ function Student() {
     lastName: "",
     username: "",
     country: "",
-    comments: "",
-    checkbox: "",
   });
 
-
+  
   //data retrived here
-      const dataRetrived = (e) => {
-        e.preventDefault();
+  const dataRetrived = (e) => {
+    //this () is used to get the setData here so what we gonna do here
+    setData((data) => {
+      return {
+        ...data,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
 
-        const{name , value , checked , type} = e.target;
-        //this () is used to get the setData here so what we gonna do here
-        setData((data)=>( {...data , [name] : type === 'checkbox' ? checked : value}    ))
-
-};
 
   //data stor vlaues here when I caling this functions then something happend
   const dataStor = () => {
     console.log(userData);
-    if (!userData) {
-      toast.warning("pls fill the form");
-    } else {
-      toast.success("!you're data stored");
-    }
   };
 
   return (
@@ -107,7 +102,7 @@ function Student() {
             </select>
           </div>
 
-          <div class="mb-6">
+          {/* <div class="mb-6">
             <label
               for="confirm-password"
               class="block text-gray-700 font-semibold mb-2"
@@ -119,8 +114,8 @@ function Student() {
               type="checkbox"
               checked={userData.checkbox}
               onChange={dataRetrived}
-            />
-            <span>
+            /> */}
+          {/* <span>
               get notified whene someine posts a comment on a positingx
             </span>
             <br></br>
@@ -152,9 +147,9 @@ function Student() {
               checked={userData.checkbox}
             />
             <label for="agree" class="text-gray-700">
-              I agree to the terms and conditions
+              I agree to the terms and con  ditions
             </label>
-          </div>
+          </div> */}
 
           <div class="mt-6">
             <button class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
