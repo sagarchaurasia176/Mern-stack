@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import {toast} from 'react-toastify';
+
+
 function Student() {
 
+    //useState data 
+    const [userData , setData] = useState({firstName:'' , lastName:'' , username:'' , password:'' , country:'' , comments:'' });
 
   return (
     <div>
@@ -69,39 +74,37 @@ function Student() {
             >
               Country
             </label>
-         
+
             <select className=" w-full p-2">
-                <option>India</option>
-                <option>pakistan</option>
-                <option>Japan</option>
+              <option>India</option>
+              <option>pakistan</option>
+              <option>Japan</option>
             </select>
-
           </div>
-
-
 
           <div class="mb-6">
             <label
               for="confirm-password"
               class="block text-gray-700 font-semibold mb-2"
             >
-            Comments
+              Comments
             </label>
 
-            <input type="checkbox"/>
-            <span>get notified whene someine posts a comment on a positingx</span>
+            <input type="checkbox" />
+            <span>
+              get notified whene someine posts a comment on a positingx
+            </span>
             <br></br>
             <input type="checkbox" />
             <span>get notified whene candidates apply for the job</span>
             <br></br>
 
             <input type="checkbox" />
-            <span>get notified whene candidates accepts or reject an offer</span>
-
-
+            <span>
+              get notified whene candidates accepts or reject an offer
+            </span>
           </div>
 
-          
           <div class="flex items-center mb-4">
             <input type="checkbox" id="agree" name="agree" class="mr-2" />
             <label for="agree" class="text-gray-700">
