@@ -4,7 +4,10 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <nav className="bg-gray-800 p-4">
+
+
+
+      <nav className=" bg-slate-900 p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <a href="#" className="text-white font-bold text-xl">
@@ -44,10 +47,18 @@ function Header() {
                 <NavLink to="/Dashboard">DashBoard</NavLink>
               </li>
               <li>
-                <NavLink to="/Login">Login</NavLink>
+                <NavLink to="/Login">
+                  <button className=" bg-slate-200 text-black  p-1 text-center rounded  ">
+                    Login
+                  </button>
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/Login">Signup</NavLink>
+                <NavLink to="/Signup">
+                  <button className=" bg-slate-200 text-black  p-1 text-center rounded  ">
+                    Signup
+                  </button>
+                </NavLink>
               </li>
             </ul>
           </div>

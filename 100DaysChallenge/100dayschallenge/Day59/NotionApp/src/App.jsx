@@ -13,8 +13,7 @@ function App() {
     <>
       {/* nav components */}
       <div className=" container w-full  text-white">
-
-      <Header />
+        <Header />
       </div>
 
       <Routes>
@@ -23,8 +22,10 @@ function App() {
         <Route path="/About" element={<About />}></Route>
         <Route path="/Dashboard" element={<Dashboard />}></Route>
         <Route path="/Login" element={<Login />}></Route>
-        <Route path="/Singup" element={<Signup />}></Route>
+        <Route path="/Signup" element={<Signup />}></Route>
       </Routes>
+
+      
     </>
   );
 }
