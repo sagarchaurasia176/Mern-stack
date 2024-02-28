@@ -1,12 +1,14 @@
-import React from "react";
 //router-dom imp
 import { NavLink } from "react-router-dom";
-function Header() {
-  return (
+function Header(props) {
+  
+  //state manangement 
+  const {isLoggedIn} = props.isLoggedIn;
+  const{setLoggedIn } = props.setLoggedIn;
+
+
+   return (
     <div>
-
-
-
       <nav className=" bg-slate-900 p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
@@ -32,8 +34,9 @@ function Header() {
           </button>
 
           {/* Navigation Links */}
-          <div className="hidden lg:flex flex-grow justify-end items-center">
-            <ul className=" flex  text-center space-x-8 text-white">
+          <div className="hidden lg:flex flex-grow  justify-around items-center">
+           
+            <ul className=" flex  text-center space-x-16 text-white">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
@@ -43,25 +46,50 @@ function Header() {
               <li>
                 <NavLink to="/About">About</NavLink>
               </li>
-              <li>
-                <NavLink to="/Dashboard">DashBoard</NavLink>
-              </li>
-              <li>
-                <NavLink to="/Login">
-                  <button className=" bg-slate-200 text-black  p-1 text-center rounded  ">
-                    Login
-                  </button>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/Signup">
-                  <button className=" bg-slate-200 text-black  p-1 text-center rounded  ">
-                    Signup
-                  </button>
-                </NavLink>
-              </li>
+
             </ul>
+
+            <div className=" flex  gap-4  ">
+              {
+                !isLoggedIn &&
+                <NavLink to="/Login">
+                  <button className=" bg-slate-400 p-1  rounded-lg  ">Login</button>
+                </NavLink>
+              }
+              {
+                !isLoggedIn &&
+                <NavLink to="/Signup">
+                  <button className="  bg-slate-400 p-1  rounded-lg ">Signup</button>
+                </NavLink>
+              }
+
+              {
+                // when the condtions is true 
+                isLoggedIn &&
+                <NavLink to="/Logout">
+                  <button className="  bg-slate-400 p-1  rounded-lg ">Dashboard</button>
+                </NavLink>
+              }
+              {
+
+                //when the conditions is true
+                isLoggedIn &&
+                <NavLink to="/Signout">
+                  <button className="  bg-slate-400 p-1  rounded-lg ">Logout</button>
+                </NavLink>
+              }
+
+
+            </div>
+
+
+
           </div>
+
+
+
+
+
         </div>
       </nav>
     </div>

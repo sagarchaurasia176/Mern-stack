@@ -7,13 +7,19 @@ import About from "./Page/About";
 import Dashboard from "./Page/Dashboard";
 import Login from "./Page/Login";
 import Signup from "./Page/Signup";
+import React, { useState } from "react";
 
 function App() {
+
+  const[isLoggedIn , setLoggedIn] = useState(false);
+
   return (
     <>
       {/* nav components */}
       <div className=" container w-full  text-white">
-        <Header />
+       
+        {/* passing the props here */}
+        <Header isLoggedIn = {isLoggedIn} setLoggedIn = {setLoggedIn} />
       </div>
 
       <Routes>
