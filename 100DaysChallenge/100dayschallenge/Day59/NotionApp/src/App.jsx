@@ -20,6 +20,7 @@ function App() {
        
         {/* passing the props here */}
         <Header isLoggedIn = {isLoggedIn} setLoggedIn = {setLoggedIn} />
+     
       </div>
 
       <Routes>
