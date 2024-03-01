@@ -8,8 +8,8 @@ function Header() {
 
   return (
     <div>
-      <nav className=" bg-slate-900 p-4">
-        <div className="container mx-auto flex justify-between items-center">
+      <nav className=" bg-slate-950  shadow-2xl p-4">
+        <div className="  w-3/4 @media (min-width: 768px)  m-auto flex justify-evenly ">
           {/* Logo */}
           <a href="#" className="text-white font-bold text-xl">
             JMS
@@ -34,7 +34,7 @@ function Header() {
 
           {/* Navigation Links */}
           <div className="hidden lg:flex flex-grow  justify-between items-center">
-              <ul className=" flex   gap-16 text-center  justify-around  ml-80  ">
+            <ul className=" flex   gap-16 text-center  justify-around  ml-80  ">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
@@ -49,7 +49,7 @@ function Header() {
                 <NavLink to="/About"></NavLink>
               </li>
             </ul>
-        
+
             {/* button */}
             <ButtonLogic />
           </div>
