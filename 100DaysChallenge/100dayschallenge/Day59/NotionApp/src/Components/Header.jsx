@@ -1,15 +1,10 @@
 //router-dom imp
 import { NavLink } from "react-router-dom";
-import toast from "react-hot-toast";
 
+import ButtonLogic from "./ButtonLogic";
 
-function Header(props) {
-
+function Header() {
   //recived the props here
-
-  const isLoggedIn = props.isLoggedIn;
-  const  setLoggedIn = props.setLoggedIn;
-
 
   return (
     <div>
@@ -36,10 +31,10 @@ function Header(props) {
               ></path>
             </svg>
           </button>
-          
+
           {/* Navigation Links */}
-          <div className="hidden lg:flex flex-grow  justify-around items-center">
-            <ul className=" flex  text-center space-x-16 text-white">
+          <div className="hidden lg:flex flex-grow  justify-between items-center">
+              <ul className=" flex   gap-16 text-center  justify-around  ml-80  ">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
@@ -51,56 +46,12 @@ function Header(props) {
               </li>
 
               <li>
-                <NavLink to="/About">My Products</NavLink>
+                <NavLink to="/About"></NavLink>
               </li>
             </ul>
-            <div className=" flex  gap-4  ">
-              {!isLoggedIn && (
-                <NavLink
-                  to="/Login"
-                  className="  bg-slate-400 p-1  rounded-lg "
-                >
-                  <button className="  bg-slate-400 p-1  rounded-lg ">
-                    login
-                  </button>
-                </NavLink>
-              )}
-              {!isLoggedIn && (
-                <NavLink to="/Signup">
-                  <button
-                    onClick={() => {
-                      setLoggedIn(false)
-                      toast.success("logout");
-                    }}
-                    className="  bg-slate-400 p-2  rounded-lg "
-                  >
-                    Signup
-                  </button>
-                </NavLink>
-              )}
-              {/* // when the condtions is true */}
-              {isLoggedIn && (
-                <NavLink to="/Dashboard">
-                  <button className="  bg-slate-400 p-1  rounded-lg ">
-                    Dashboard
-                  </button>
-                </NavLink>
-              )}
-              {/* //when the conditions is true */}
-              {isLoggedIn && (
-                <NavLink to="/">
-                  <button
-                    onClick={() => {
-                      setLoggedIn(false);
-                      toast.success("Logged out");
-                    }}
-                    className="  bg-slate-400 p-1  rounded-lg "
-                  >
-                    logout
-                  </button>
-                </NavLink>
-              )}
-            </div>
+        
+            {/* button */}
+            <ButtonLogic />
           </div>
         </div>
       </nav>
