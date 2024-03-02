@@ -1,16 +1,38 @@
 import React, { useState } from "react";
 import Img from "../Img/Student.avif";
+import toast from "react-hot-toast";
+import { FaRegEye } from "react-icons/fa";
+//  //close
+import { FaRegEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Login() {
-  const [userData, setData] = useState({ username: " ", password: "" });
+  const [userData, setData] = useState({
+    username: " ",
+    password: null,
+  });
 
-  function clickSubmit() {
-    setData((data) => ({
-      ...data,
-      //now we want to get the object and it's key values
-      [data.target.name]: data.target.value,
+  //click to submit the values
+
+  const clickSubmit = (e) => {
+    //it's basically contained the prev state copy and update the next values
+    setData((prev) => ({
+      ...prev,
+
+      //key and object values
+      [e.target.name]: e.target.value,
     }));
+  };
+
+  function save(e) {
+    //this is mandatory to used here otherwise it's reload very fastly
+    e.preventDefault();
+    toast.success("Thanks for login");
+    console.log(userData);
+    console.log("clicked");
   }
+
+  const [pass, showPass] = useState(false);
 
   return (
     <>
@@ -25,19 +47,21 @@ function Login() {
             numquam officia qui!
           </p>
           <form
+            onSubmit={save}
             // onClick={runData}
             className=" shadow-md rounded px-8 pt-6 pb-8 mb-4"
           >
             <div className="mb-4">
               <label
                 className="block text-white text-sm font-bold mb-2"
-                for="username"
+                htmlFor="username"
               >
                 Username
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="username"
+                required
                 type="email"
                 name="username"
                 value={userData.username}
@@ -48,33 +72,41 @@ function Login() {
             <div className="mb-6">
               <label
                 className="block text-white-700 text-sm font-bold mb-2"
-                for="password"
+                htmlFor="password"
               >
                 Password
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="password"
+                required
                 name="password"
-                type="password"
+                type={pass ? "text" : "password"}
                 onChange={clickSubmit}
                 value={userData.password}
                 placeholder="********"
               />
+
+              {/* button icon apply  logic*/}
+              <span
+                onClick={() => {
+                  showPass((prev) => !prev);
+                }}
+                className=" cursor-pointer flex justify-end"
+              >
+                {pass ? <FaRegEyeSlash /> : <FaRegEye />}
+              </span>
             </div>
             <div className="flex items-center justify-end">
-              <a
+              <Link
+                to="#"
                 className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-                href="#"
               >
                 Forgot Password?
-              </a>
+              </Link>
             </div>
             <br></br>
-            <button
-              className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
+            <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Sign In
             </button>
             <br></br>

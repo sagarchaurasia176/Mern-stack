@@ -1,4 +1,13 @@
 import React from "react";
+  // import Study from '../Img/Study.avif'
+  //open
+//   import { FaRegEye } from "react-icons/fa";
+//  //close
+//  import { FaRegEyeSlash } from "react-icons/fa";
+// <FaRegEyeSlash />
+
+// //open
+//   <FaRegEye />
 
 function Signup() {
   return (
@@ -11,10 +20,7 @@ function Signup() {
           </p>
         </div>
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            perferendis deleniti magni.
-          </p>
+            {/* <img src={Study} alt="" /> */}
         </div>
       </div>
     </div>
