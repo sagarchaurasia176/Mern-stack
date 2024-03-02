@@ -13,7 +13,15 @@ function ButtonLogic(props) {
       <div className=" flex  justify-around gap-4  ">
         {!isLoggedIn && (
           <NavLink to="/Login" className="  bg-slate-400 p-1  rounded-lg ">
-            <button className="  bg-slate-400 p-1  rounded-lg ">login</button>
+            <button
+              onClick={() => {
+                setLoggedIn(false);
+                toast.error("login again");
+              }}
+              className="  bg-slate-400 p-1  rounded-lg "
+            >
+              login
+            </button>
           </NavLink>
         )}
         {!isLoggedIn && (
@@ -21,7 +29,7 @@ function ButtonLogic(props) {
             <button
               onClick={() => {
                 setLoggedIn(false);
-                toast.success("logout");
+                toast.error("singup again");
               }}
               className="  bg-slate-400 p-2  rounded-lg "
             >

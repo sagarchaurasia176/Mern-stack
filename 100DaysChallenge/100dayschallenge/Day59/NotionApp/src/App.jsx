@@ -9,12 +9,10 @@ import Login from "./Page/Login";
 import Signup from "./Page/Signup";
 import React, { useState } from "react";
 
-//context api data pass 
+//context api data pass
 import dataPass from "./Context/Log";
 
-
 function App() {
-
   const [isLoggedIn, setLoggedIn] = useState(false);
   return (
     <>
@@ -32,15 +30,9 @@ function App() {
             <Route path="/Login" element={<Login />}></Route>
             <Route path="/Signup" element={<Signup />}></Route>
           </Routes>
-
         </dataPass.Provider>
         {/* passing the props here */}
-
       </div>
-
-
-
-
     </>
   );
 }

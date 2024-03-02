@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Img from "../Img/Student.avif";
 import toast from "react-hot-toast";
 import { FaRegEye } from "react-icons/fa";
-//  //close
 import { FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import dataPass from "../Context/Log";
 
 function Login() {
   const [userData, setData] = useState({
     username: " ",
     password: null,
   });
+
+  //context api data
+  const { isLoggedIn, setLoggedIn } = useContext(dataPass);
 
   //click to submit the values
 
@@ -23,16 +26,19 @@ function Login() {
       [e.target.name]: e.target.value,
     }));
   };
+  const nav = useNavigate();
 
   function save(e) {
     //this is mandatory to used here otherwise it's reload very fastly
     e.preventDefault();
     toast.success("Thanks for login");
-    console.log(userData);
-    console.log("clicked");
+    setLoggedIn(true);
+    nav("/Dashboard");
   }
 
   const [pass, showPass] = useState(false);
+
+  //navigata logic to move to the next logic here
 
   return (
     <>
@@ -46,6 +52,7 @@ function Login() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
             numquam officia qui!
           </p>
+
           <form
             onSubmit={save}
             // onClick={runData}
@@ -106,9 +113,11 @@ function Login() {
               </Link>
             </div>
             <br></br>
+
             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
               Sign In
             </button>
+
             <br></br>
           </form>
         </div>

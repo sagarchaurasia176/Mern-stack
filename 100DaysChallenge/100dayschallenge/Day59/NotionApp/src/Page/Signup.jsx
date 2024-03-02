@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Study from "../Img/Study.avif";
 import toast from "react-hot-toast";
+
+import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import dataPass from "../Context/Log";
 
 function Signup() {
   //form verifications concepts
@@ -8,8 +13,11 @@ function Signup() {
     firstname: "",
     lastname: "",
     email: "",
-    password: null,
+    password: '',
+    confirmpassword: ''
   });
+
+  const [password, setPass] = useState(false);
 
   //handler the functions
   const tabHandler = (e) =>
@@ -18,12 +26,18 @@ function Signup() {
       [e.target.name]: e.target.value,
     }));
 
+  //data is logged in and setLoggedIn
+  const { isLoggedIn, setLoggedIn } = useContext(dataPass)
+  const nav = useNavigate();
+
   //submit the form data
   const stored = (e) => {
     e.preventDefault();
-    toast.success("Welcome back");
-    console.log(userData);
+    setLoggedIn(true);
+    nav('/Dashboard')
+    toast.success("Thanks for singup");
   };
+
 
   return (
     <div>
@@ -59,7 +73,7 @@ function Signup() {
           {/* <img src={Study} alt="" /> */}
           <form
             onSubmit={stored}
-            className=" shadow-md rounded px-8 pt-6 pb-8 h-auto mb-4 w-2/3  bg-slate-50 m-auto"
+            className=" shadow-md rounded px-9 pt-3 pb-3 h-auto mb-5 w-2/3  bg-slate-50 m-auto"
           >
             <div class="mb-4 ">
               <label
@@ -113,29 +127,74 @@ function Signup() {
                 onChange={tabHandler}
               />
             </div>
-            <div class="mb-6">
+            <div class="mb-2">
+
               <label
                 class="block text-gray-700 text-sm font-bold mb-2"
                 for="password"
               >
                 Password
               </label>
+
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="password"
-                type="password"
+                type={password ? "text" : "password"}
                 name="password"
                 value={userData.password}
                 onChange={tabHandler}
                 placeholder="Password"
               />
+
+              <span
+                onClick={() => {
+                  setPass((prev) => !prev);
+                }}
+                className=" flex justify-end text-black cursor-pointer"
+              >
+                {password ? <FaRegEye /> : <FaRegEyeSlash />}
+              </span>
+
             </div>
+            <div class="mb-2">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Confirm Password
+              </label>
+
+              <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="password"
+                type={password ? "text" : "password"}
+                name="confirmpassword"
+                value={userData.confirmpassword}
+                onChange={tabHandler}
+                placeholder="confirm password"
+              />
+
+              <span
+                onClick={() => {
+                  setPass((prev) => !prev);
+                }}
+                className=" flex justify-end text-black cursor-pointer"
+              >
+                {password ? <FaRegEye /> : <FaRegEyeSlash />}
+              </span>
+            </div>
+            <div className="account flex justify-between">
+              <p className=" text-black border-b border-black cursor-pointer    font-light">Create account</p>
+              <p className=" text-blue-500 font-medium cursor-pointer  underline-offset-8">forget password</p>
+            </div>
+            <br></br>
             <div class="flex items-center justify-between">
               <button class="  bg-yellow-300 text-black hover:bg-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Register
               </button>
             </div>
           </form>
+
         </div>
         {/* grid last values */}
       </div>
