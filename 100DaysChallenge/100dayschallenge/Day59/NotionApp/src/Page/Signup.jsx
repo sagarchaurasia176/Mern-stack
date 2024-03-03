@@ -1,11 +1,15 @@
 import React, { useContext, useState } from "react";
 import Study from "../Img/Study.avif";
 import toast from "react-hot-toast";
+// import { FaGoogle } from "react-icons/fa";
+
+// import { FcGoogle } from "react-icons/fc";
 
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import dataPass from "../Context/Log";
+import Security from "../Auth/Security";
 
 function Signup() {
   //form verifications concepts
@@ -13,8 +17,8 @@ function Signup() {
     firstname: "",
     lastname: "",
     email: "",
-    password: '',
-    confirmpassword: ''
+    password: "",
+    confirmpassword: "",
   });
 
   const [password, setPass] = useState(false);
@@ -27,17 +31,21 @@ function Signup() {
     }));
 
   //data is logged in and setLoggedIn
-  const { isLoggedIn, setLoggedIn } = useContext(dataPass)
+  const { isLoggedIn, setLoggedIn } = useContext(dataPass);
   const nav = useNavigate();
 
-  //submit the form data
+  //submit handler data
   const stored = (e) => {
     e.preventDefault();
-    setLoggedIn(true);
-    nav('/Dashboard')
-    toast.success("Thanks for singup");
+    if (userData.password != userData.confirmpassword) {
+      setLoggedIn(false);
+      toast.error("password not match");
+    } else {
+      setLoggedIn(true);
+      nav("/Dashboard");
+      toast.success("Account created");
+    }
   };
-
 
   return (
     <div>
@@ -128,7 +136,6 @@ function Signup() {
               />
             </div>
             <div class="mb-2">
-
               <label
                 class="block text-gray-700 text-sm font-bold mb-2"
                 for="password"
@@ -154,7 +161,6 @@ function Signup() {
               >
                 {password ? <FaRegEye /> : <FaRegEyeSlash />}
               </span>
-
             </div>
             <div class="mb-2">
               <label
@@ -183,18 +189,27 @@ function Signup() {
                 {password ? <FaRegEye /> : <FaRegEyeSlash />}
               </span>
             </div>
-            <div className="account flex justify-between">
-              <p className=" text-black border-b border-black cursor-pointer    font-light">Create account</p>
-              <p className=" text-blue-500 font-medium cursor-pointer  underline-offset-8">forget password</p>
+            <div className="account flex justify-end">
+              <p className=" text-blue-500 font-medium cursor-pointer  underline-offset-8">
+                forget password
+              </p>
             </div>
             <br></br>
             <div class="flex items-center justify-between">
-              <button class="  bg-yellow-300 text-black hover:bg-white w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                Register
+              <button class="  bg-yellow-300  text-black hover:text-white transition-all  hover:bg-slate-700 w-full font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Create Account
               </button>
             </div>
+            <br></br>
+            {/* create the line  */}
+            <div className=" flex w-full items-center gap-x-4">
+              <div className=" w-full h-[1px] bg-black"> </div>
+              <p className=" text-black font-medium leading[1.375rem]">OR</p>
+              <div className="w-full h-[1px] bg-black "></div>
+            </div>
+           
+              <Security />
           </form>
-
         </div>
         {/* grid last values */}
       </div>

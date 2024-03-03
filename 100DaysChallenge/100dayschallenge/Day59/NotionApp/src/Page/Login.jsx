@@ -31,6 +31,7 @@ function Login() {
   function save(e) {
     //this is mandatory to used here otherwise it's reload very fastly
     e.preventDefault();
+
     toast.success("Thanks for login");
     setLoggedIn(true);
     nav("/Dashboard");
