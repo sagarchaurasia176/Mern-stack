@@ -2,9 +2,7 @@ import React, { useContext, useState } from "react";
 import Study from "../Img/Study.avif";
 import toast from "react-hot-toast";
 // import { FaGoogle } from "react-icons/fa";
-
 // import { FcGoogle } from "react-icons/fc";
-
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +18,7 @@ function Signup() {
     password: "",
     confirmpassword: "",
   });
-
+  //this is for password
   const [password, setPass] = useState(false);
 
   //handler the functions
@@ -46,14 +44,38 @@ function Signup() {
       toast.success("Account created");
     }
   };
+  //this is for active btn
+  const [active, setActive] = useState(false);
+  // stop handler
+  const stopHandler = () => {
+    setActive(true);
+    toast.success("student mode on");
+  };
+  // disabled handler
+  const disabledHandler = () => {
+    setActive(false);
+    toast.success("Instructor mode on");
+  };
 
+  //active btn css
+  const styles = {
+    stopHandler: {
+      backgroundColor: "white",
+      color: "black",
+      cursor: "pointer",
+      hover: "black",
+    },
+    disabledHandler: {
+      backgroundColor: "gray",
+      hover: "black",
+    },
+  };
   return (
     <div>
       <h1 className="text-4xl  font-extrabold  text-white mb-4">
         Join the millions learning to <br />
         code with JMS for free
       </h1>
-
       <div className=" grid grid-cols-2">
         <div className="container-first ">
           <p>
@@ -64,20 +86,30 @@ function Signup() {
             </i>
           </p>
           <br></br>
-
           <img src={Study} className="  animate-pulse" alt="study" />
           {/* form types */}
         </div>
 
         <div className="">
           <div className="btn bg-slate-400 w-1/3 m-auto rounded-lg text-center  flex p-2">
-            <button class="  hover:bg-slate-500 text-white font-bold py-2 px-4 rounded">
+            <button
+              disabled={active}
+              onClick={stopHandler}
+              style={active ? styles.stopHandler : styles.disabledHandler}
+              className=" cursor-pointer text-white font-bold py-2 px-4 rounded"
+            >
               Student
             </button>
-            <button class="  hover:bg-slate-500 text-white font-bold py-2 px-4 rounded">
+            <button
+              onClick={disabledHandler}
+              disabled={!active}
+              style={!active ? styles.stopHandler : styles.disabledHandler}
+              className="  hover:bg-slate-500 text-white font-bold py-2 px-4 rounded"
+            >
               Instructor
             </button>
           </div>
+
           {/* <img src={Study} alt="" /> */}
           <form
             onSubmit={stored}
@@ -172,7 +204,7 @@ function Signup() {
 
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                id="password"
+                id="confpassword"
                 type={password ? "text" : "password"}
                 name="confirmpassword"
                 value={userData.confirmpassword}
@@ -207,8 +239,10 @@ function Signup() {
               <p className=" text-black font-medium leading[1.375rem]">OR</p>
               <div className="w-full h-[1px] bg-black "></div>
             </div>
-           
-              <Security />
+            {/* google auth provider  */}
+            <button className=" w-full  flex items-center justify-center">
+              <Security isLogged />
+            </button>
           </form>
         </div>
         {/* grid last values */}
