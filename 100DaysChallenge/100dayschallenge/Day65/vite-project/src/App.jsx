@@ -1,11 +1,10 @@
-import './App.css'
-import UseRefStart from './components/UseRefStart'
+import React from 'react'
+import UseRefRepeat from './components/useRefRepeat'
 function App() {
-
   return (
-    <>
-  <UseRefStart/>
-    </>
+    <div>
+      <UseRefRepeat/>
+    </div>
   )
 }
 
