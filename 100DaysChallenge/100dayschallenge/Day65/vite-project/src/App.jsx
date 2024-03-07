@@ -1,11 +1,9 @@
 import React from 'react'
-import UseRefRepeat from './components/useRefRepeat'
-import Mode from './components/Mode'
+import UseReducer from './components/UseReducer'
 function App() {
   return (
     <div>
-      <Mode/>
-      <UseRefRepeat/>
+      <UseReducer/>
     </div>
   )
 }

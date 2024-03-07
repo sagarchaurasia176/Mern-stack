@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function UseReducer() {
-  
-  
-    return (
-    <div>
-        {/* useReducer */}
-        
+//    
+  return(
+      <div>
 
-    </div>
-    )
+      </div>
+  )
 }
 
-export default UseReducer
+export default UseReducer;
