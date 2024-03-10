@@ -1,11 +1,10 @@
+import Counter from "../../../../ReduxPracticeDay71/rtkProject/src/Components/Counter";
 import "./App.css";
-import Coutner from "./Components/Coutner";
-
+ 
 function App() {
   return (
     <>
-      <h1>Redux toolkit</h1>
-      <Coutner/>      
+     <Counter/>
     </>
   );
 }
