@@ -1,9 +1,18 @@
-import React from 'react'
-
-function Dataget() {
+import React from "react";
+import Card from "./Card";
+function Dataget(props) {
+  //fetch props
+  const { dataPass } = props.dataPass;
   return (
-    <div>Dataget</div>
-  )
+    <>
+     
+      {dataPass.map((val) => {
+        return <Card key={val.id} {...dataPass}></Card>;
+      })}
+
+
+    </>
+  );
 }
 
-export default Dataget
+export default Dataget;
