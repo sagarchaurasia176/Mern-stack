@@ -1,22 +1,20 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import Navbar from './Components/Navbar'
-import Cart from './Components/DataApi'
-
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import AddCart from "./Components/AddCart";
+import Home from "./Components/Home";
 function App() {
-
   return (
     <>
+      <div>
+        <Navbar />
+      </div>
       <Routes>
-        {/* routes is linking paths */}
-        <Route path='/' element={<Navbar />}>
-        </Route>
+        <Route path="/" element={<Home/>} />
+        <Route path="/addcart" element={<AddCart />} />
       </Routes>
-      <Cart/>
-      {/* <Cart/> */}
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
