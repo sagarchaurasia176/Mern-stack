@@ -1,7 +1,6 @@
 import React from "react";
 
 function ProductCard({ values }) {
-  let descp=12;
   return (
     <div>
       <div
@@ -20,13 +19,13 @@ function ProductCard({ values }) {
           <img src={values.image} className="h-full w-full " />
         </div>
         <div>
-          <p className="w-auto text-black text-center font-normal text-[10px] text-left">
-            {values.description.slice(0,100)}
+          <p className="w-auto text-black  font-normal text-[10px] text-center">
+            {values.description.slice(0, 100)}
           </p>
         </div>
         <div className="flex justify-between gap-12 items-center w-full mt-5">
           <div>
-            <p className="text-green-600 font-semibold">${values.price}</p>
+            <p className="text-green-600 font-semibold">{values.price}</p>
           </div>
           <button className=" bg-slate-200 p-2">Add to Cart</button>
         </div>

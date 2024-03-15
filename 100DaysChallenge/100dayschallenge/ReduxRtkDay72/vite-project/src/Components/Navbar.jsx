@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <nav className="  bg-slate-200 p-4">
+      <nav className="  bg-slate-500 p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
 
@@ -27,7 +27,7 @@ function Navbar() {
           <ul className="flex space-x-4">
             <li>
               <NavLink to="/AddCart">
-                <CiShoppingCart className=" text-green-500 size-6 cursor-pointer" />
+                <CiShoppingCart className=" text-black-800 size-8 cursor-pointer" />
               </NavLink>
             </li>
           </ul>
