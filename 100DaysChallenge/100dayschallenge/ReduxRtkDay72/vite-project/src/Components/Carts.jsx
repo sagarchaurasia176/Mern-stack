@@ -1,11 +1,18 @@
 import React from 'react'
 
-function Carts() {
+// to receive the data form the cartPage 
+
+function Carts({item, index}) {
   return (
-    <div>
-        <h1>
-            This is cart page 
-        </h1>
+    <div> 
+        <div className=' grid grid-cols-2 gap-2 '>
+         {/* card page  */}
+          <div className=' bg-slate-300 h-auto w-auto  '>
+            
+          </div>
+        
+        </div>
+        
 
     </div>
   )
