@@ -2,23 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Carts from "./Carts";
-
-
 function AddCart() {
   //  calling the redux selector here
   // it's return the complet of the arrays
   const { cartRedux } = useSelector((state) => state);
   const [totalAmount, setTotal] = useState(0);
- 
- 
   //USED FOR THIS KIND OF THE OPERATINS
   //acumulator vaues
   useEffect(() => {
-    //add the price 
+    //add the price
     // this is baically the intital states
     //and we have to receive this using the Redux page
     setTotal(cartRedux.reduce((acc, init) => acc + init.price, 0));
-  },[cartRedux]);
+  }, [cartRedux]);
   return (
     <div>
       {/* used the map here with the help of carts */}
@@ -34,8 +30,7 @@ function AddCart() {
               {
                 // firstly map the data
                 cartRedux.map((item, index) => {
-                  //sending the props here and then transfer into its next files 
-                  
+                  //sending the props here and then transfer into its next files
                   return <Carts key={item.id} index={index} item={item} />;
                 })
               }
@@ -55,14 +50,9 @@ function AddCart() {
               <p>Total amount : {totalAmount}</p>
             </div>
           </div>
-
-        )
-        
-        
-        // if this is false then this would be works
-      
-        : (
-
+        ) : 
+        (
+          // if this is false then this would be works
           <div>
             <h1 className=" text-black text-center mt-32">Data Not Found</h1>
             <Link to="/home">
