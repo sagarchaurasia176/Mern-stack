@@ -5,7 +5,7 @@ import React from 'react'
 function Carts({item, index}) {
   return (
     <div> 
-        <div className=' grid grid-cols-2 gap-2 '>
+        <div assName=' grid grid-cols-2 gap-2 '>
          {/* card page  */}
           <div className=' bg-slate-300 h-auto w-auto  '>
                 <div>
