@@ -27,8 +27,10 @@ function AddCart() {
           <div>
             {/*  */}
             <div
-             className=" grid grid-cols-2  m-auto  h-auto p-1 border-b-black"
-  >
+              className=" w-3/4  m-auto  
+            
+            "
+            >
               {
                 // firstly map the data
                 cartRedux.map((item, index) => {
@@ -36,29 +38,43 @@ function AddCart() {
                   return <Carts key={item.id} index={index} item={item} />;
                 })
               }
-            </div>
 
-            <div
-            className=" 
-           grid
-            h-auto p-1 border-b-black"
-            >
-              <h3>Your Cart</h3>
-              <br></br>
-              <div>
-                <h2>Summary</h2>
+              <div className=" col-span-1 mt-4">
+                <h1 className="  text-green-500 font-semibold text-xl  w-auto">
+                  Your Cart
+                </h1>
+                <br></br>
+                <div>
+                  <h2 className="  font-bold text-green-600  text-lg">
+                    Summary
+                  </h2>
+                </div>
+                <br></br>
+                <div>
+                  <span className=" font-semibold text-black">
+                    Total Items -: {cartRedux.length}{" "}
+                  </span>
+                </div>
+                <div>
+                  <br></br>
+                  <p className=" text-red-500 flex font-semibold">
+                    Total amount : {totalAmount}
+                  </p>
+                </div>
               </div>
-              <br></br>
-              <div>
-                <span>items -: {cartRedux.length} </span>
+              <div className=" flex justify-end ">
+                <button
+                  className="
+                p-2   w-3/5
+                
+                bg-green-800 text-white  font-normal"
+                >
+                  Checkout Now
+                </button>
               </div>
-            </div>
-            <div>
-              <p>Total amount : {totalAmount}</p>
             </div>
           </div>
-        ) : 
-        (
+        ) : (
           // if this is false then this would be works
           <div>
             <h1 className=" text-black text-center mt-32">Data Not Found</h1>

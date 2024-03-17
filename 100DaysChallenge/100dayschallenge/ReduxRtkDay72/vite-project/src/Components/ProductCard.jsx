@@ -44,7 +44,7 @@ function ProductCard({ values }) {
         </div>
         <div className="flex justify-between gap-12 items-center w-full mt-5">
           <div>
-            <p className="text-green-600 font-semibold">{values.price}</p>
+            <p className="text-green-600 font-semibold">$ {values.price}</p>
           </div>
 
           {/* add or remove btn */}
