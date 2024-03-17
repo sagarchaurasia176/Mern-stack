@@ -1,6 +1,26 @@
 import React from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { add, remove } from "../States/slice/Slice";
 function ProductCard({ values }) {
+  //to get the slice name here which is the empty here
+  const { cartRedux } = useSelector((state) => state);
+  // dispatch the values
+
+  const dipatch = useDispatch();
+  // ==============================================================
+
+  const AddBtn = () => {
+    dipatch(add(values));
+    toast.success("Item is Added");
+  }
+
+
+
+  const RemoveBtn = () => {
+    dipatch(remove(values.id));
+    toast.success("Item is Removed");
+  }
   return (
     <div>
       <div
@@ -14,7 +34,6 @@ function ProductCard({ values }) {
             {values.title}
           </p>
         </div>
-
         <div className="h-[180px]">
           <img src={values.image} className="h-full w-full " />
         </div>
@@ -27,7 +46,24 @@ function ProductCard({ values }) {
           <div>
             <p className="text-green-600 font-semibold">{values.price}</p>
           </div>
-          <button className=" bg-slate-200 p-2">Add to Cart</button>
+
+          {/* add or remove btn */}
+          {cartRedux.some((check) => check.id === values.id) ? (
+            //this is the true
+            <button
+              onClick={RemoveBtn}
+              className=" bg-slate-400 p-1 text-white font-semibold ">
+              Remove
+            </button>
+        )
+            : (
+              // this is false
+              <button
+                onClick={AddBtn}
+                className=" bg-red-500 w-auto p-1  text-white font-semibold ">
+                Add
+              </button>
+            )}
         </div>
       </div>
     </div>

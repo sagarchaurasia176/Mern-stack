@@ -26,7 +26,9 @@ function AddCart() {
           // creating the main div of values
           <div>
             {/*  */}
-            <div>
+            <div
+             className=" grid grid-cols-2  m-auto  h-auto p-1 border-b-black"
+  >
               {
                 // firstly map the data
                 cartRedux.map((item, index) => {
@@ -35,7 +37,12 @@ function AddCart() {
                 })
               }
             </div>
-            <div>
+
+            <div
+            className=" 
+           grid
+            h-auto p-1 border-b-black"
+            >
               <h3>Your Cart</h3>
               <br></br>
               <div>
