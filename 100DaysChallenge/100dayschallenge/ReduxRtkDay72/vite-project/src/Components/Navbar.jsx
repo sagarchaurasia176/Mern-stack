@@ -1,14 +1,16 @@
 import React from "react";
 import { CiShoppingCart } from "react-icons/ci";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const { cartRedux } = useSelector((state) => state);
+
   return (
     <div>
-      <nav className="  bg-slate-500 p-4">
+      <nav className=" bg-white shadow-lg p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-
             <NavLink to={"/home"}>
               <div>
                 <img
@@ -24,10 +26,22 @@ function Navbar() {
               <div className=" text-black">ShopyMart</div>
             </NavLink>
           </div>
-          <ul className="flex space-x-4">
-            <li>
+          <ul className="">
+            <li className=" flex">
               <NavLink to="/AddCart">
-                <CiShoppingCart className=" text-black-800 size-8 cursor-pointer" />
+                {/* cart get the values from the  Redux sides*/}
+                {cartRedux.length > 0 && (
+                  <sup
+                    className=" text-green-700 flex  justify-end  font-semibold 
+                h-4 w-4 rounded-full items-center j  animate-bounce
+               "
+                  >
+  
+                    {cartRedux.length}
+                  </sup>
+                )}
+
+                <CiShoppingCart className="  text-orange-600 size-6 cursor-pointer" />
               </NavLink>
             </li>
           </ul>
