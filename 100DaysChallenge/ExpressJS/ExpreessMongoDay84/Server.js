@@ -16,12 +16,14 @@ app.post("/api/data", (req, res) => {
   res.send("data passed");
 });
 
+
 // connect mongose here
 const mongoose = require("mongoose");
 // mongoose connections
-mongoose.connect("mongodb://localhost:27017/JainServer", {
+mongoose
+  .connect("mongodb://localhost:27017/JainServer", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("connection succesfull");
