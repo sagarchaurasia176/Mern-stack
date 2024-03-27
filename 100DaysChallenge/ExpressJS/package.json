@@ -2,6 +2,7 @@
   "dependencies": {
     "express": "^4.19.1",
     "init": "^0.1.2",
+    "inti": "^0.0.0",
     "mongoose": "^8.2.3"
   }
 }
