@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 //to import the database url here
 require('dotenv').config();
-
 // db connect
 const dbConnect = () => {
     mongoose.connect(process.env.DATABASE_URL, {
@@ -14,7 +13,4 @@ const dbConnect = () => {
         console.log("error in db connection")
     })
 }
-
 module.exports = dbConnect;
-
-

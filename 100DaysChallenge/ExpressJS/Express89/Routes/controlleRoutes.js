@@ -1,16 +1,18 @@
 // this is basically the controller page
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-
 //controller here
-const {HandlerSchema} = require('../controller/HandlerSchema');
-const {GetController} = require('../controller/GetController')
+const { HandlerSchema , GetData  } = require("../controller/HandlerSchema");
 //send the post req
-router.post('/api/data' , HandlerSchema);
-router.get('/api/get' , GetController)
+
+const {updateController} = require('../controller/UpdateController')
+
+router.post("/api/data", HandlerSchema);
+// GET REQUEEST DATA HERE
+router.get('/api/datas/:id' , GetData);
+// update done
+router.put('/update/:id' , updateController);
 
 
 module.exports = router;
-
-
