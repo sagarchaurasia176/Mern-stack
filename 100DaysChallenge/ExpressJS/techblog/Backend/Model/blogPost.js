@@ -1,4 +1,4 @@
-const mongoose = require("../config/db");
+const mongoose = require("mongoose");
 //creation for the schema post
 
 const schemaForPost = new mongoose.Schema({

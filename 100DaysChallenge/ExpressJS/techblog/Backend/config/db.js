@@ -11,7 +11,6 @@ const dbConnect = () => {
         console.log("db connected succesfully")
     }).catch(()=>{
         console.error("error in db connections");
-        process.exit();
     })
 };
 module.exports  = dbConnect;
