@@ -23,7 +23,18 @@ function Navbar() {
 
             {/* IT MOVES TO THE HOME PAGE */}
             <NavLink to={"/home"}>
-              <div className=" text-black">ShopyMart</div>
+              <div className=" text-black">ShopyMart
+
+              </div>
+              <div className="">
+                <ul className=" flex justify-evenly m-auto items-center space-x-4">
+              <li>Home</li>
+              <li>Product</li>
+              <li>Contact</li>
+              <li>about</li>
+
+                </ul>
+              </div>
             </NavLink>
           </div>
           <ul className="">
