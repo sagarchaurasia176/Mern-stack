@@ -1,20 +1,20 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const dbConnect = require("./config/db");
-const routerData = require("./Routes/HandlerRoutes");
-const PORTS = process.env.PORT || 8000;
+
 //middleware
 app.use(express.json());
-//routes file
-//now start to mounting
-app.use("/api/blog", routerData);
-//port for the server
+//routes
+const routerImp = require("./Routes/HandlerRoutes");
+app.use("/api/data", routerImp);
 
-app.listen(PORTS, () => {
-  console.log("server start.....");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log("server start....");
 });
 app.get("/", (req, res) => {
-  res.send("<b>This is backend blog server</b>");
+  res.send("server start");
 });
-dbConnect()
+//mongo db
+const dbConnect = require("./config/db");
+dbConnect();

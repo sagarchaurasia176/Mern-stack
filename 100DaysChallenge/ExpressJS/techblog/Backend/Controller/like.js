@@ -1,5 +1,4 @@
 const likeData = require('../Model/likes')
-
 // exports the data first
 exports.like = async (req, res) => {
     try {

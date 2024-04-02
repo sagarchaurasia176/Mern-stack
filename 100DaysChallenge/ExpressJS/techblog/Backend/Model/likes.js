@@ -5,9 +5,6 @@ const schemaForLike = new mongoose.Schema({
 
     email:{
         type: String,
-        trim: true,
-        lowercase: true,
-        unique: true,
         required: 'Email address is required',
     },
 });

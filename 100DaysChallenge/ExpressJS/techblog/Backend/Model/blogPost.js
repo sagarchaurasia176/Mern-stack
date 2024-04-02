@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 //creation for the schema post
-
 const schemaForPost = new mongoose.Schema({
   title: {
     type: String,
@@ -13,4 +12,4 @@ const schemaForPost = new mongoose.Schema({
 });
 
 //schema for passed the data
-module.exports = new mongoose.model("postData", schemaForPost);
+module.exports = mongoose.model("schemaforPost", schemaForPost);

@@ -1,14 +1,10 @@
-const { PostController } = require("../Controller/PostController");
-const { like } = require("../Controller/like");
-const { comment } = require("../Controller/comment");
 const express = require("express");
-
 const router = express.Router();
+const { PostController} = require("../Controller/PostController");
+const {getController} = require("../Controller/getController")
 
-// start to send the req
-router.post("/post/data", PostController);
-router.post("/comment", comment);
-router.post("/like", like);
+router.post("/blog/data", PostController);
+router.get('/fetch/data' , getController)
 
-//exports are nedded
+// MODULE EXPORTS
 module.exports = router;

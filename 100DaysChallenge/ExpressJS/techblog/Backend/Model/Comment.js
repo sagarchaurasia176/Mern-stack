@@ -4,11 +4,8 @@ const mongoose = require("mongoose");
 const schemaForComments = new mongoose.Schema({
   email: {
     type: String,
-    trim: true,
-    lowercase: true,
-    unique: true,
-    // boorow the code from stackoverflow   
-  },
+    require:true,
+   },
 
   title: {
     type: String,

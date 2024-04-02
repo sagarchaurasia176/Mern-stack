@@ -4,7 +4,7 @@ exports.HandlerSchema = async (req, res) => {
     //desturcture the data here
     const { name, Author } = req.body;
     //pass operation to the db
-    const response = await SD.create({ name, Author });
+    const response = await SD.create ({ name, Author });
     res.status(200).json({
       success: true,
       data: response,
@@ -45,4 +45,23 @@ exports.GetData = async (req, res) => {
     });
   }
 };
-
+// get controller the datas
+exports.getController = async (req, res) => {
+  try {
+    //pass the data
+    const fetchPostData = SD.find({})
+      res.status(200).json({
+      success: true,
+      data: fetchPostData,
+      message: "fetch the data from the db",
+    });
+  } 
+    catch (er) {
+    console.log("error");
+     res.status(500).json({
+      success: false,
+      message: "data is not be fetch from the db",
+      data: er.message,
+    });
+  }
+};
