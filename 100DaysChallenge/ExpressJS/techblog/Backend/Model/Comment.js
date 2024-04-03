@@ -1,20 +1,17 @@
 const mongoose = require("mongoose");
 //creation for the schema post
-
 const schemaForComments = new mongoose.Schema({
-  email: {
-    type: String,
-    require:true,
-   },
-
-  title: {
-    type: String,
-    require: true,
+  post: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "schemaforPost",
   },
-
+  users: {
+    type: "string",
+    required: true,
+  },
   description: {
-    type: String,
-    require: true,
+    type: "string",
+    required: true,
   },
 });
 
