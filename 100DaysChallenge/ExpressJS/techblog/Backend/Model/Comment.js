@@ -16,4 +16,4 @@ const schemaForComments = new mongoose.Schema({
 });
 
 //schema for passed the data
-module.exports = new mongoose.model("CommentData", schemaForComments);
+module.exports = mongoose.model("CommentData", schemaForComments);
