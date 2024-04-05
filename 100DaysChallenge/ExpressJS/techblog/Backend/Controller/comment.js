@@ -7,9 +7,7 @@ exports.comment = async (req, res) => {
     // save the data to the db
     const commentss = await CommentData.create({ post, users, description });
     //now pass the data to update its => it is bacially wrapped to the file okay
-    const updateData = await postReq.findByIdAndUpdate(
-      post,
-      { $push: { Comment: commentss._id } },
+    const updateData = await postReq.findByIdAndUpdate(post,{ $push: { Comment: commentss._id } },
       { new: true }
     ).populate("Comment").exec();  
       //response of the send
@@ -29,12 +27,11 @@ exports.comment = async (req, res) => {
   }
 };
 
-
 // ================================================================//
 exports.getComments = async (req, res) => {
   try {
     //pass the data to the db
-    const postSnd = await commentData.find({});
+    const postSnd = await CommentData.find({});
     res.status(200).json({
       success: true,
       message: "data is passed to db from the comment page",
@@ -43,7 +40,7 @@ exports.getComments = async (req, res) => {
   } catch (e) {
     console.log("error in post controller");
     res.status(500).json({
-      success: true,
+      success: false,
       message: "data is not passed to the comment page",
       error: e.message,
     });
