@@ -15,7 +15,7 @@ exports.comment = async (req, res) => {
       success: true,
       message: "data is passed to db from the comment page",
       data: updateData,
-    });
+  });
 }
     catch (er) {
     console.log("error in post controller");
