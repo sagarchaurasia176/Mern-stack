@@ -24,8 +24,11 @@ exports.PostController = async (req, res) => {
 exports.getController = async (req, res) => {
     try {
       //pass the data
-      const fetchPostData = await schemaforPost.find({})
-        res.status(200).json({
+      const fetchPostData = await 
+      schemaforPost.find();
+      // ==================
+      // response the data from the json
+      res.status(200).json({
         success: true,
         data: fetchPostData,
         message: "fetch the data from the db",
