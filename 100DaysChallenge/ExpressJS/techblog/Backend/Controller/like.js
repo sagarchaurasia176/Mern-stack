@@ -33,16 +33,19 @@ exports.like = async (req, res) => {
 exports.likeUnlike = async (req, res) => {
   try {
     const { post, likes } = req.body;
+
+    const likeOobj={
+      post:post
+    }
     //update that data
     const likeStor = await schemaforPost
       .findOneAndDelete({ post: post, _id:likes })
       .populate("likes")
       .exec();
+
+      console.log(likeStor);
     //next things is that her
-    const upPost = schemaforPost
-    .findByIdAndUpdate(post, {$pull:{likes:likeStor._id}},{ new: true })
-      .populate("likes")
-      .exec();
+    const upPost = schemaforPost.findByIdAndUpdate(post, {$pull:{likes:likeStor._id}},{ new: true }).populate("likes").exec();
     // response data here passed
     res.status(200).json({
       success: true,

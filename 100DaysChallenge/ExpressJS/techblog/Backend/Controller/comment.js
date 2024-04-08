@@ -1,7 +1,7 @@
 const CommentData = require("../Model/Comment");
 const postReq = require("../Model/blogPost");
 // exports the data first
-exports.comment = async (req, res) => {
+const comment = async (req, res,next) => {
   try {
     const { post, users, description } = req.body;
     // save the data to the db
@@ -27,3 +27,7 @@ exports.comment = async (req, res) => {
   }
 };
 
+// standard ways 
+module.exports={
+  comment
+}
